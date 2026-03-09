@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.solimananas.twa",
+    "sha256_cert_fingerprints": [
+      "31:AD:85:2E:26:A5:04:CB:1A:6E:70:28:46:C1:F6:81:2C:56:19:28:6F:C6:E1:5E:35:43:5A:C7:70:78:02:8B"
+    ]
+  }
+}]
