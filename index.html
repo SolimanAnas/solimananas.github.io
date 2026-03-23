@@ -10,7 +10,6 @@
             --tech-gray: #f4f7f6;
             --text-dark: #333;
             --white: #ffffff;
-            --accent-green: #28a745;
         }
 
         body {
@@ -55,13 +54,8 @@
             border-radius: 30px;
             font-weight: bold;
             transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .download-btn:hover { 
-            background-color: #003d7a; 
-            transform: translateY(-2px); 
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
+        .download-btn:hover { background-color: #003d7a; transform: translateY(-2px); }
 
         h2 { 
             color: var(--dcas-blue); 
@@ -70,7 +64,6 @@
             margin-top: 40px;
             text-transform: uppercase;
             font-size: 1.2em;
-            letter-spacing: 1px;
         }
 
         .project-highlight {
@@ -81,45 +74,23 @@
             margin: 20px 0;
         }
 
-        .live-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--dcas-blue);
-            font-weight: bold;
-            text-decoration: none;
-        }
-
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 25px;
         }
 
-        .skill-category h4 { 
-            margin-bottom: 12px; 
-            color: var(--dcas-blue); 
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
-        }
-        
+        .skill-category h4 { margin-bottom: 10px; color: var(--dcas-blue); border-bottom: 1px solid #eee; padding-bottom: 5px;}
         ul { padding-left: 20px; }
         li { margin-bottom: 8px; }
 
-        .experience-item { margin-bottom: 25px; }
-        .job-header { 
-            display: flex; 
-            justify-content: space-between; 
-            font-weight: bold; 
-            margin-bottom: 5px;
-        }
-        .company { color: var(--dcas-blue); font-size: 1.1em; }
-        .date { color: #666; font-style: italic; }
+        .job-header { display: flex; justify-content: space-between; font-weight: bold; }
+        .company { color: var(--dcas-blue); }
 
         @media (max-width: 600px) {
             .container { margin: 10px; padding: 20px; }
             .skills-grid { grid-template-columns: 1fr; }
             .job-header { flex-direction: column; }
-            h1 { font-size: 1.8em; }
         }
     </style>
 </head>
@@ -136,7 +107,6 @@
         
         <div class="download-container">
             <a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" download class="download-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:10px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 Download Official CV
             </a>
         </div>
@@ -144,19 +114,19 @@
 
     <section>
         <h2>Professional Summary</h2>
-        [span_1](start_span)<p>Medical professional with 10+ years of frontline pre-hospital experience[span_1](end_span). [span_2](start_span)Highly skilled in web development, digital clinical tools, and translating complex EMS operational needs into technical solutions that improve workflow and system accessibility[span_2](end_span).</p>
+        <p>Medical professional with 10+ years of frontline pre-hospital experience. Highly skilled in web development, digital clinical tools, and translating complex EMS operational needs into technical solutions that improve workflow and system accessibility.</p>
     </section>
 
     <section>
         <h2>Key Technical Initiative</h2>
         <div class="project-highlight">
             <h3>Smart CPG – Clinical Practice Guidelines Platform</h3>
-            [span_3](start_span)<p>Developed a mobile-friendly Progressive Web App (PWA) to provide field crews with rapid, reliable access to treatment protocols during emergency response[span_3](end_span).</p>
+            <p>Developed a mobile-friendly Progressive Web App (PWA) to provide field crews with rapid, reliable access to treatment protocols during emergency response.</p>
             <ul>
-                [span_4](start_span)<li>Managed full lifecycle: Design, development, and GitHub deployment[span_4](end_span).</li>
-                [span_5](start_span)<li>Optimized for high-pressure ambulance operational environments[span_5](end_span).</li>
+                <li>Managed full lifecycle: Design, development, and GitHub deployment.</li>
+                <li>Optimized for high-pressure ambulance operational environments.</li>
             </ul>
-            <a href="https://cpg.qzz.io/" target="_blank" class="live-link">🚀 Launch Live Application: cpg.qzz.io</a>
+            <p>🚀 <strong><a href="https://cpg.qzz.io/" target="_blank">Launch Live Application: cpg.qzz.io</a></strong></p>
         </div>
     </section>
 
@@ -166,19 +136,19 @@
             <div class="skill-category">
                 <h4>IT & Systems Support</h4>
                 <ul>
-                    [span_6](start_span)<li>Web Dev: HTML, CSS, JavaScript[span_6](end_span)</li>
-                    [span_7](start_span)<li>PWA & GitHub Repository Management[span_7](end_span)</li>
-                    [span_8](start_span)<li>Clinical Guideline Digitization[span_8](end_span)</li>
-                    [span_9](start_span)<li>Technical Support for Operational Staff[span_9](end_span)</li>
+                    <li>Web Dev: HTML, CSS, JavaScript</li>
+                    <li>PWA & GitHub Repository Management</li>
+                    <li>Clinical Guideline Digitization</li>
+                    <li>Technical Support for Operational Staff</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h4>Clinical & Governance</h4>
                 <ul>
-                    [span_10](start_span)<li>Prehospital Emergency Care[span_10](end_span)</li>
-                    [span_11](start_span)<li>JCI Accreditation Team Support[span_11](end_span)</li>
-                    [span_12](start_span)<li>Trauma & Airway Management[span_12](end_span)</li>
-                    [span_13](start_span)<li>ACLS, PHTLS, ITLS Certified[span_13](end_span)</li>
+                    <li>Prehospital Emergency Care</li>
+                    <li>JCI Accreditation Team Support</li>
+                    <li>Trauma & Airway Management</li>
+                    <li>ACLS, PHTLS, ITLS Certified</li>
                 </ul>
             </div>
         </div>
@@ -189,23 +159,23 @@
         <div class="experience-item">
             <div class="job-header">
                 <span class="company">Dubai Corporation for Ambulance Services (DCAS)</span>
-                <span class="date">2020 – Present</span>
+                <span>2020 – Present</span>
             </div>
             <p><strong>Emergency Medical Technician – Prehospital Response</strong></p>
             <ul>
-                [span_14](start_span)<li>Spearheaded the development of the Smart CPG digital platform[span_14](end_span).</li>
-                [span_15](start_span)<li>Ensured organizational safety through clinical documentation and data auditing[span_15](end_span).</li>
+                <li>Spearheaded the development of the Smart CPG digital platform.</li>
+                <li>Ensured organizational safety through clinical documentation and data auditing.</li>
             </ul>
         </div>
 
-        <div class="experience-item">
+        <div class="experience-item" style="margin-top:20px;">
             <div class="job-header">
                 <span class="company">Saudi German Hospital / El-Galaa Military Hospital</span>
-                <span class="date">2015 – 2020</span>
+                <span>2015 – 2020</span>
             </div>
             <p><strong>ICU/ER Charge Nurse & Instructor</strong></p>
             <ul>
-                [span_16](start_span)<li>Managed acute trauma and medical emergencies in high-acuity settings[span_16](end_span).</li>
+                <li>Managed acute trauma and medical emergencies in high-acuity settings.</li>
             </ul>
         </div>
     </section>
@@ -213,14 +183,13 @@
     <section>
         <h2>Education & Credentials</h2>
         <ul>
-            [span_17](start_span)<li><strong>MBA</strong> (In Progress) - Liverpool John Moores University[span_17](end_span)</li>
-            [span_18](start_span)<li><strong>MSC in Advanced Emergency Nursing</strong> (2024)[span_18](end_span)</li>
-            [span_19](start_span)<li><strong>Bachelor of Nursing Science</strong> (2015)[span_19](end_span)</li>
-            [span_20](start_span)<li><strong>ICDL Certification</strong>[span_20](end_span)</li>
+            <li><strong>MBA (In Progress)</strong> - Liverpool John Moores University</li>
+            <li><strong>MSC in Advanced Emergency Nursing (2024)</strong></li>
+            <li><strong>Bachelor of Nursing Science (2015)</strong></li>
+            <li><strong>ICDL Certification</strong></li>
         </ul>
     </section>
 </div>
 
 </body>
 </html>
- 
