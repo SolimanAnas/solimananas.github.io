@@ -1,45 +1,141 @@
-# Soliman Anas Soliman | Medical Systems Support & Web Developer
+Soliman Anas – Professional CV & Portfolio
 
-Welcome to my professional portfolio and Live CV repository. [span_1](start_span)I am a medical professional with over 10 years of frontline EMS and ICU experience, currently specializing in the intersection of healthcare operations and digital systems support[span_1](end_span).
+This repository contains the source code for my personal CV and portfolio website, presenting my background in Emergency Medical Services (EMS), Medical Systems Support, and my work developing digital clinical tools.
 
-## 🚀 Live CV
-**View my interactive resume here:** [https://solimananas.github.io/](https://solimananas.github.io/)
-
----
-
-## 🛠 Featured Project: Smart CPG Platform
-[span_2](start_span)The cornerstone of my technical work is the **Smart CPG (Clinical Practice Guidelines) Platform**[span_2](end_span). 
-* **Live Application:** [https://cpg.qzz.io/](https://cpg.qzz.io/)
-* **[span_3](start_span)Purpose:** A mobile-optimized Progressive Web App (PWA) designed to provide DCAS field crews with instantaneous access to treatment protocols in high-pressure emergency environments[span_3](end_span).
-* **[span_4](start_span)Impact:** Bridges the gap between complex clinical documentation and real-world operational usability[span_4](end_span).
+The website highlights my clinical experience, technical skills, and software projects aimed at improving accessibility and usability of medical systems in real-world operational environments.
 
 ---
 
-## 💼 Professional Profile
-### Clinical Excellence
-* **[span_5](start_span)Current Role:** Emergency Medical Technician at **Dubai Corporation for Ambulance Services (DCAS)** (2020 – Present)[span_5](end_span).
-* **[span_6](start_span)Certifications:** PHTLS, ITLS, ACLS, BLS, PEPP, and EMPACT[span_6](end_span).
-* **[span_7](start_span)Background:** Extensive experience in ICU/ER environments and mass-casualty preparedness[span_7](end_span).
+Live Website
 
-### Technical Capability
-* **[span_8](start_span)Web Development:** Proficient in HTML, CSS, and JavaScript with a focus on Progressive Web Apps (PWA)[span_8](end_span).
-* **[span_9](start_span)Systems Support:** Experienced in GitHub version control, repository management, and clinical data auditing[span_9](end_span).
-* **[span_10](start_span)Governance:** Active contributor to Clinical Practice Guideline updates and JCI accreditation standards[span_10](end_span).
+Portfolio Website
+
+https://solimananas.github.io/
 
 ---
 
-## 🎓 Education
-* **[span_11](start_span)MBA – Master of Business Administration** (In Progress) – Liverpool John Moores University[span_11](end_span).
-* **[span_12](start_span)MSC in Advanced Emergency Nursing** (2024) – TECH Technological University[span_12](end_span).
-* **[span_13](start_span)Bachelor of Nursing Science** (2015) – Zagazig University[span_13](end_span).
+About Me
+
+I am a Registered Nurse (RN) and Emergency Medical Technician (EMT) with more than 10 years of experience in emergency and prehospital care.
+
+Alongside my clinical work, I develop web-based clinical tools and digital systems designed to improve:
+
+- Clinical workflow efficiency
+- Accessibility of treatment protocols
+- Operational usability for EMS crews
+- Digital transformation of clinical guidelines
+
+My goal is to bridge frontline clinical operations with practical technology solutions.
 
 ---
 
-## 📄 Repository Structure
-* `index.html`: The source code for my Live CV.
-* `CV/`: Contains the official PDF version of my resume, optimized for the Medical Systems Support Officer vacancy.
+Featured Projects
 
-## 📧 Contact
-* **Email:** [Ssoliman@dcas.gov.ae](mailto:Ssoliman@dcas.gov.ae)
-* **LinkedIn:** [Soliman Anas](https://www.linkedin.com/in/soliman-anas-05ba8b210/)
-* **Phone:** +971 55 178 8017
+DCAS Smart CPG
+
+A Clinical Practice Guidelines Progressive Web Application designed for EMS crews to access treatment protocols quickly during emergency response.
+
+Live Application
+https://solimananas.github.io/CPG-2025/
+
+Repository
+https://github.com/SolimanAnas/CPG-2025
+
+---
+
+Zad Al-Muslim
+
+A lightweight Islamic digital assistant including a Tasbeeh counter and useful daily tools.
+
+Live Application
+https://solimananas.github.io/Tasbee7/
+
+Repository
+https://github.com/SolimanAnas/Tasbee7
+
+---
+
+Other Repositories
+
+You can explore additional projects and work on my GitHub profile:
+
+GitHub Profile
+https://github.com/SolimanAnas
+
+Main Repositories
+
+• Smart CPG
+https://github.com/SolimanAnas/CPG-2025
+
+• Zad Al-Muslim
+https://github.com/SolimanAnas/Tasbee7
+
+• CV Website
+https://github.com/SolimanAnas/solimananas.github.io
+
+---
+
+Website Features
+
+The CV website includes:
+
+- Responsive layout optimized for desktop and mobile
+- Dark and light mode support
+- Animated section transitions
+- Themed background support
+- Project showcase
+- Professional experience timeline
+- Direct CV download
+- Links to GitHub and LinkedIn profiles
+
+---
+
+Technology Stack
+
+This project is intentionally lightweight and built using core web technologies:
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- GitHub Pages for hosting
+
+No frameworks are used to keep the site fast, portable, and easy to maintain.
+
+---
+
+Repository Structure
+
+/
+index.html
+README.md
+CV/
+   Soliman_Anas_Medical_Systems_Support_CV.pdf
+
+---
+
+Contact
+
+Soliman Anas Soliman
+
+Location
+Ajman, United Arab Emirates
+
+Phone
++971 55 178 8017
+
+Email
+Ssoliman@dcas.gov.ae
+
+LinkedIn
+https://www.linkedin.com/in/soliman-anas-05ba8b210/
+
+GitHub
+https://github.com/SolimanAnas
+
+---
+
+License
+
+This repository is provided for portfolio and professional presentation purposes.
+
+© 2026 Soliman Anas Soliman
