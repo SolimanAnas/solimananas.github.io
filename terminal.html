@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soliman Anas | Terminal Portfolio</title>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+<style>
+/* Base Styles */
+body {
+    background: #0b0b0b;
+    color: #d1d5db;
+    font-family: monospace;
+    margin: 0;
+    padding: 0 40px 40px 40px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Navigation Menu */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 25px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed #1f2937;
+    position: sticky;
+    top: 0;
+    background: rgba(11, 11, 11, 0.95);
+    z-index: 100;
+}
+
+.navbar a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #22c55e;
+}
+
+/* Sections */
+.section {
+    border: 1px solid #1f2937;
+    padding: 25px;
+    margin-bottom: 35px;
+    background: #000;
+    scroll-margin-top: 80px;
+}
+
+/* Hero / Whoami Layout */
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-image {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+    filter: grayscale(20%); 
+}
+
+/* Typography & Elements */
+.prompt {
+    color: #22c55e;
+    margin-bottom: 6px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #9ca3af;
+    margin-bottom: 25px;
+}
+
+/* Tech Stack Badges */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.tech-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #050505;
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.tech-badge i {
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* Badge Hover Colors */
+.tech-badge:hover { transform: translateY(-2px); color: #fff; }
+.html-badge:hover { border-color: #e34f26; }
+.html-badge:hover i { color: #e34f26; }
+.css-badge:hover { border-color: #1572b6; }
+.css-badge:hover i { color: #1572b6; }
+.js-badge:hover { border-color: #f7df1e; }
+.js-badge:hover i { color: #f7df1e; }
+.python-badge:hover { border-color: #3776ab; }
+.python-badge:hover i { color: #3776ab; }
+.node-badge:hover { border-color: #339933; }
+.node-badge:hover i { color: #339933; }
+.github-badge:hover { border-color: #ffffff; }
+.github-badge:hover i { color: #ffffff; }
+.ps-badge:hover { border-color: #31a8ff; }
+.ps-badge:hover i { color: #31a8ff; }
+
+/* Action Buttons (Centered below tech stack) */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.action-btn {
+    border: 1px solid #22c55e;
+    color: #22c55e;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.2s;
+    background: transparent;
+}
+
+.action-btn:hover {
+    background: rgba(34, 197, 94, 0.1);
+}
+
+/* Projects & Skills */
+.project {
+    border: 1px solid #1f2937;
+    padding: 18px;
+    margin-bottom: 18px;
+    background: #050505;
+}
+
+.project-title {
+    color: #22c55e;
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.skill-box {
+    border: 1px solid #1f2937;
+    padding: 18px;
+    background: #050505;
+}
+
+ul {
+    margin-top: 10px;
+    padding-left: 18px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Typing Animations */
+.cursor {
+    display: inline-block;
+    width: 10px;
+    background: #22c55e;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1 }
+    50% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+.typing {
+    border-right: 2px solid #22c55e;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 700px) {
+    .skills { grid-template-columns: 1fr; }
+    .title { font-size: 28px; }
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-image { width: 150px; }
+    .navbar { flex-wrap: wrap; gap: 15px; }
+    .action-buttons { flex-direction: column; width: 100%; }
+    .action-btn { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<nav class="navbar">
+    <a href="#home">./home</a>
+    <a href="#about">./about</a>
+    <a href="#projects">./projects</a>
+    <a href="#skills">./skills</a>
+    <a href="#contact">./contact</a>
+</nav>
+
+<div class="section" id="home">
+    <div class="hero-container">
+        <div class="hero-text">
+            <div class="prompt">$ whoami</div>
+            <div class="title">Soliman Anas Soliman</div>
+            <div class="subtitle typing">RN | EMT | Medical Systems Support | Web Developer</div>
+            
+            </div>
+        
+        <div class="hero-image">
+            <img src="CV/photo.png" alt="Soliman Anas">
+        </div>
+    </div>
+
+    <div class="tech-stack">
+        <a href="#projects" class="tech-badge html-badge">
+            <i class="devicon-html5-plain"></i> HTML
+        </a>
+        <a href="#projects" class="tech-badge css-badge">
+            <i class="devicon-css3-plain"></i> CSS
+        </a>
+        <a href="#projects" class="tech-badge js-badge">
+            <i class="devicon-javascript-plain"></i> JavaScript
+        </a>
+        <a href="#projects" class="tech-badge python-badge">
+            <i class="devicon-python-plain"></i> Python
+        </a>
+        <a href="#projects" class="tech-badge node-badge">
+            <i class="devicon-nodejs-plain"></i> Node.js
+        </a>
+        <a href="https://github.com/SolimanAnas" target="_blank" class="tech-badge github-badge">
+            <i class="devicon-github-original"></i> GitHub
+        </a>
+        <a href="#skills" class="tech-badge ps-badge">
+            <i class="devicon-photoshop-plain"></i> Photoshop
+        </a>
+    </div>
+
+    <div class="action-buttons">
+        <a href="#projects" class="action-btn">View Projects</a>
+        <a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" class="action-btn">View CV</a>
+        <a href="#contact" class="action-btn">Contact Me</a>
+    </div>
+</div>
+
+<div class="section" id="about">
+    <div class="prompt">$ cat about.txt</div>
+    <p>Medical professional with more than 10 years of experience in emergency and prehospital care. I build digital solutions that improve accessibility of clinical protocols and operational workflow in EMS environments. Currently working on web-based clinical tools and exploring AI applications for healthcare.</p>
+</div>
+
+<div class="section" id="projects">
+    <div class="prompt">$ ls projects/</div>
+    
+    <div class="project">
+        <div class="project-title">DCAS Smart CPG</div>
+        <p>Clinical Practice Guidelines Progressive Web App designed for EMS crews to access treatment protocols quickly during emergency response.</p>
+        <a class="action-btn" href="https://cpg.qzz.io/" target="_blank" style="padding: 6px 12px; font-size: 12px; margin-top: 10px; display: inline-block;">Open Project</a>
+    </div>
+
+    <div class="project">
+        <div class="project-title">Zad Al-Muslim</div>
+        <p>Islamic digital assistant including Tasbeeh counter and useful Muslim tools.</p>
+        <a class="action-btn" href="https://solimananas.github.io/Tasbee7/" target="_blank" style="padding: 6px 12px; font-size: 12px; margin-top: 10px; display: inline-block;">Open Project</a>
+    </div>
+</div>
+
+<div class="section" id="skills">
+    <div class="prompt">$ ls skills/</div>
+    <div class="skills">
+        
+        <div class="skill-box">
+            <strong>Frontend</strong>
+            <ul>
+                <li>HTML & CSS</li>
+                <li>JavaScript</li>
+                <li>Progressive Web Apps</li>
+            </ul>
+        </div>
+
+        <div class="skill-box">
+            <strong>Backend & Scripting</strong>
+            <ul>
+                <li>Python</li>
+                <li>Node.js</li>
+                <li>REST APIs</li>
+                <li>GitHub Pages</li>
+            </ul>
+        </div>
+
+        <div class="skill-box">
+            <strong>Clinical & IT Support</strong>
+            <ul>
+                <li>System Auditing</li>
+                <li>End-User Tech Support</li>
+                <li>EMS Operations</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="section" id="contact">
+    <div class="prompt">$ contact</div>
+    <p>📍 Ajman, UAE</p>
+    <p>📞 +971 55 178 8017</p>
+    <p>✉ Ssoliman@dcas.gov.ae</p>
+    <br>
+    <p>🔗 <a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank" style="color: #22c55e;">LinkedIn Profile</a></p>
+    <p>🔗 <a href="https://github.com/SolimanAnas" target="_blank" style="color: #22c55e;">GitHub Repository</a></p>
+</div>
+
+<footer>
+    $ echo "© 2026 Soliman Anas Soliman"
+</footer>
+
+</div>
+
+</body>
+</html>
