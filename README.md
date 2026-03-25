@@ -3,8 +3,18 @@
   <p>RN | EMT | Medical Systems Support | Web Developer</p>
   <p><i>Bridging frontline clinical operations with practical technology solutions.</i></p>
 
+  <a href="https://solimananas.github.io/terminal.html" target="_blank">
+    <img src="CV/terminal.jpg" alt="Terminal CV Preview" width="800" style="border-radius: 8px; margin: 20px 0;" />
+  </a>
+  
+  <br />
+
   <a href="https://solimananas.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/View_Live_Portfolio-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Portfolio Website" />
+    <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV Website" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://solimananas.github.io/terminal.html" target="_blank">
+    <img src="https://img.shields.io/badge/View_Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV Website" />
   </a>
 </div>
 
@@ -85,7 +95,10 @@ The CV website includes responsive layout optimization, dark/light mode support,
 ```text
 /
 ├── index.html
+├── terminal.html
 ├── README.md
 └── CV/
+    ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
+ 
