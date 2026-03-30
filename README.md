@@ -1,98 +1,68 @@
-<div align="center">
-  <h2>Soliman Anas - Professional CV & Portfolio</h2>
-  <p>RN | EMT | Medical Systems Support | Web Developer</p>
-  <p><i>Bridging frontline clinical operations with practical technology solutions.</i></p>
+<div align="center"><!-- 🔥 Animated Typing Header --><img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas;RN+%7C+EMT+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" /><br/><br/>
 
-  <a href="https://solimananas.github.io/terminal.html" target="_blank">
-    <img src="CV/terminal.jpg" alt="Terminal CV Preview" width="800" style="border-radius: 8px; margin: 20px 0;" />
-  </a>
-  
-  <br />
+<!-- 👁 Visitor Counter --><img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" /><br/><br/>
 
-  <a href="https://solimananas.github.io/" target="_blank">
-    <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV Website" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://solimananas.github.io/terminal.html" target="_blank">
-    <img src="https://img.shields.io/badge/View_Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV Website" />
-  </a>
-</div>
+<h2>Professional CV & Portfolio</h2><p><b>RN | EMT | Medical Systems Support | Web Developer</b></p>
+<p><i>Building practical tools for real-world clinical environments.</i></p></div>---
 
-<br />
+🖥️ Live Preview
 
-### 🔗 Jump to
-- [About Me](#-about-me)
-- [Technologies & Tools](#-technologies--tools)
-- [Featured Projects](#-featured-projects)
-- [GitHub Stats](#-github-stats)
-- [Repository Structure](#-repository-structure)
-- [Connect with Me](#-connect-with-me)
+<div align="center"><a href="https://solimananas.github.io/terminal.html">
+  <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="850" style="border-radius:10px;" />
+</a><br/><br/>
 
----
+<a href="https://solimananas.github.io/">
+  <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" />
+</a><a href="https://solimananas.github.io/terminal.html">
+  <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" />
+</a></div>---
 
-## 🚀 About Me
+🚀 About Me
 
-I am a Registered Nurse (RN) and Emergency Medical Technician (EMT) with more than **10 years of experience** in emergency and prehospital care. 
+I am a Registered Nurse (RN) and Emergency Medical Technician (EMT) with 10+ years in emergency and prehospital care.
 
-Alongside my clinical work, I develop web-based clinical tools and digital systems designed to improve:
-- 🏥 **Clinical workflow efficiency**
-- 📚 **Accessibility of treatment protocols**
-- 🚑 **Operational usability for EMS crews**
-- 💻 **Digital transformation of clinical guidelines**
+💡 I specialize in:
+
+- Clinical workflow optimization
+- EMS-friendly digital tools
+- Lightweight offline-first applications
+- Translating protocols into usable systems
 
 ---
 
-## 🛠️ Technologies & Tools
+🛠️ Tech Stack
 
-**I build intentionally lightweight, fast, and portable applications using:**
+<div align="center"><img src="https://skillicons.dev/icons?i=html,css,js,python,nodejs,git,github" /></div>---
 
-<p>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-</p>
+💻 Featured Projects
 
-**My Gear & Deployment:**
-<p>
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=GitHubPages&logoColor=white" alt="GitHub Pages" />
-  <img src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black" alt="Photoshop" />
-</p>
+🚑 DCAS Smart CPG
+
+- 🔗 https://solimananas.github.io/CPG-2025/
+- 📂 https://github.com/SolimanAnas/CPG-2025
+
+📿 Zad Al-Muslim
+
+- 🔗 https://solimananas.github.io/Tasbee7/
+- 📂 https://github.com/SolimanAnas/Tasbee7
 
 ---
 
-## 💻 Featured Projects
+📊 GitHub Analytics
 
-### 🚑 [DCAS Smart CPG](https://solimananas.github.io/CPG-2025/)
-A Clinical Practice Guidelines Progressive Web Application (PWA) designed for EMS crews to access treatment protocols quickly during emergency response.
-- 🔗 **[Live Application](https://solimananas.github.io/CPG-2025/)** - 📂 **[Repository](https://github.com/SolimanAnas/CPG-2025)**
+<div align="center"><img height="170" src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&cache_seconds=1800" /><img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&cache_seconds=1800" /><br/><img src="https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b" /></div>---
 
-### 📿 [Zad Al-Muslim](https://solimananas.github.io/Tasbee7/)
-A lightweight Islamic digital assistant including a Tasbeeh counter and useful daily tools.
-- 🔗 **[Live Application](https://solimananas.github.io/Tasbee7/)** - 📂 **[Repository](https://github.com/SolimanAnas/Tasbee7)**
+🧠 What I Build
 
----
-
-## 📊 GitHub Stats 
-
-*(Note: These stats update dynamically based on my GitHub activity)*
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b" alt="Soliman's GitHub stats" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b" alt="Top Languages" width="48%" />
-</p>
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b" alt="GitHub Streak" />
-</p>
+✔ Clinical tools usable under pressure
+✔ Offline-capable web apps (PWA)
+✔ Fast, minimal, no-dependency systems
+✔ Real-world EMS solutions
 
 ---
 
-## 📂 Repository Structure
+📂 Repository Structure
 
-The CV website includes responsive layout optimization, dark/light mode support, and animated section transitions.
-
-```text
 /
 ├── index.html
 ├── terminal.html
@@ -101,4 +71,16 @@ The CV website includes responsive layout optimization, dark/light mode support,
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
- 
+
+---
+
+📫 Connect With Me
+
+<div align="center"><a href="https://github.com/SolimanAnas">
+  <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github" />
+</a></div>---
+
+<!-- 🔥 Footer --><div align="center">⭐ If you like my work, consider starring my repositories
+🚀 Always building real-world solutions
+
+</div>
