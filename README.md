@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
   <br/><br/>
 
   <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
@@ -93,18 +93,26 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
 
-```
-
 📫 Connect With Me
-​<div align="center">
+<div align="center">
 <a href="https://github.com/SolimanAnas">
 <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" />
 </a>
-<a href="https://www.google.com/search?q=https://linkedin.com/in/SolimanAnas">
-<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" />
+<a href="https://linkedin.com/in/SolimanAnas">
+<img src="https://img.shields.io/badge/LinkedIn-Soliman%20Anas-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:solimananas2012@gmail.com">
+<img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf">
+<img src="https://img.shields.io/badge/Download_CV-PDF-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" />
+</a>
+<a href="https://wa.me/+971551788017">
+<img src="https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 </a>
 </div>
-​<div align="center">
+<div align="center">
 <p>⭐ If you like my work, consider starring my repositories</p>
 <p>🚀 Always building real-world solutions</p>
-</div> 
+</div>
+
