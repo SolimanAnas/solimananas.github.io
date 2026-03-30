@@ -88,16 +88,13 @@ body {
     margin-bottom: 6px;
 }
 
-.title {
-    font-size: 36px;
-    font-weight: bold;
+/* Ensure the animated SVG scales correctly on all screens */
+.animated-subtitle {
+    max-width: 100%;
+    height: auto;
     margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    color: #9ca3af;
     margin-bottom: 25px;
+    display: block;
 }
 
 /* Tech Stack Badges */
@@ -119,9 +116,10 @@ body {
     border: 1px solid #1f2937;
     border-radius: 6px;
     color: #9ca3af;
-    text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
+    cursor: pointer;         /* Makes it feel clickable */
+    user-select: none;       /* Prevents text highlighting on rapid clicks */
 }
 
 .tech-badge i {
@@ -151,16 +149,16 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
     margin-top: 20px;
 }
 
 .action-btn {
     border: 1px solid #22c55e;
     color: #22c55e;
-    padding: 10px 20px;
+    padding: 8px 16px; /* Made smaller */
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;   /* Made font slightly smaller */
     border-radius: 4px;
     transition: all 0.2s;
     background: transparent;
@@ -208,45 +206,58 @@ footer {
     font-size: 14px;
 }
 
-/* Typing Animations */
-.cursor {
-    display: inline-block;
-    width: 10px;
-    background: #22c55e;
-    margin-left: 5px;
-    animation: blink 1s infinite;
-}
+/* =========================================
+   📱 Mobile Responsiveness
+   ========================================= */
+@media(max-width: 768px) {
+    body { 
+        padding: 0 15px 20px 15px; 
+    }
+    
+    .section { 
+        padding: 20px 15px; 
+        scroll-margin-top: 100px; 
+    }
 
-@keyframes blink {
-    0% { opacity: 1 }
-    50% { opacity: 0 }
-    100% { opacity: 1 }
-}
+    .navbar { 
+        flex-wrap: wrap; 
+        gap: 10px 15px; 
+        padding: 15px 0;
+    }
+    .navbar a { 
+        font-size: 14px; 
+    }
 
-.typing {
-    border-right: 2px solid #22c55e;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(40, end);
-}
-
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* Mobile Responsiveness */
-@media(max-width: 700px) {
-    .skills { grid-template-columns: 1fr; }
-    .title { font-size: 28px; }
     .hero-container {
         flex-direction: column-reverse;
         text-align: center;
+        gap: 15px;
     }
-    .hero-image { width: 150px; }
-    .navbar { flex-wrap: wrap; gap: 15px; }
-    .action-buttons { flex-direction: column; width: 100%; }
-    .action-btn { text-align: center; }
+    
+    .hero-image { 
+        width: 130px; 
+        margin: 0 auto;
+    }
+
+    .skills { 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    
+    .tech-badge {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    /* Keep action buttons horizontal on mobile */
+    .action-buttons { 
+        flex-direction: row; 
+        gap: 8px;
+    }
+    .action-btn { 
+        padding: 6px 10px; 
+        font-size: 12px; 
+    }
 }
 </style>
 </head>
@@ -266,10 +277,8 @@ footer {
     <div class="hero-container">
         <div class="hero-text">
             <div class="prompt">$ whoami</div>
-            <div class="title">Soliman Anas Soliman</div>
-            <div class="subtitle typing">RN | EMT | Medical Systems Support | Web Developer</div>
-            
-            </div>
+            <img class="animated-subtitle" src="https://camo.githubusercontent.com/e68152d3c596fac6d8baca78fcb2961b57780c21ae3482c4940b7d983cf7d335/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f73697a653d3238266475726174696f6e3d3330303026636f6c6f723d3232433535452663656e7465723d74727565267643656e7465723d747275652677696474683d383030266c696e65733d536f6c696d616e2b416e61732b536f6c696d616e3b524e2b2537432b506172616d656469632b2537432b5765622b446576656c6f7065723b436c696e6963616c2b53797374656d732b4275696c6465723b4272696467696e672b4d65646963696e652b2532362b546563686e6f6c6f6779" alt="Soliman Anas - RN | Paramedic | Web Developer">
+        </div>
         
         <div class="hero-image">
             <img src="CV/photo.png" alt="Soliman Anas">
@@ -277,27 +286,27 @@ footer {
     </div>
 
     <div class="tech-stack">
-        <a href="#projects" class="tech-badge html-badge">
+        <div class="tech-badge html-badge">
             <i class="devicon-html5-plain"></i> HTML
-        </a>
-        <a href="#projects" class="tech-badge css-badge">
+        </div>
+        <div class="tech-badge css-badge">
             <i class="devicon-css3-plain"></i> CSS
-        </a>
-        <a href="#projects" class="tech-badge js-badge">
+        </div>
+        <div class="tech-badge js-badge">
             <i class="devicon-javascript-plain"></i> JavaScript
-        </a>
-        <a href="#projects" class="tech-badge python-badge">
+        </div>
+        <div class="tech-badge python-badge">
             <i class="devicon-python-plain"></i> Python
-        </a>
-        <a href="#projects" class="tech-badge node-badge">
+        </div>
+        <div class="tech-badge node-badge">
             <i class="devicon-nodejs-plain"></i> Node.js
-        </a>
-        <a href="https://github.com/SolimanAnas" target="_blank" class="tech-badge github-badge">
+        </div>
+        <div class="tech-badge github-badge">
             <i class="devicon-github-original"></i> GitHub
-        </a>
-        <a href="#skills" class="tech-badge ps-badge">
+        </div>
+        <div class="tech-badge ps-badge">
             <i class="devicon-photoshop-plain"></i> Photoshop
-        </a>
+        </div>
     </div>
 
     <div class="action-buttons">
