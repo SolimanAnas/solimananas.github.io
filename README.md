@@ -92,8 +92,8 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
-;;;
 
+```
 📫 Connect With Me
 ​<div align="center">
 <a href="https://github.com/SolimanAnas">
