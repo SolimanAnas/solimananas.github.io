@@ -92,6 +92,7 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
+
 ```
 
 📫 Connect With Me
@@ -99,7 +100,7 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
 <a href="https://github.com/SolimanAnas">
 <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" />
 </a>
-<a href="https://linkedin.com/in/SolimanAnas">
+<a href="https://ae.linkedin.com/in/soliman-anas-05ba8b210">
 <img src="https://img.shields.io/badge/LinkedIn-Soliman%20Anas-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
 </a>
 <a href="mailto:solimananas2012@gmail.com">
@@ -116,4 +117,3 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
 <p>⭐ If you like my work, consider starring my repositories</p>
 <p>🚀 Always building real-world solutions</p>
 </div>
-
