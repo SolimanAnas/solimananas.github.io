@@ -92,3 +92,19 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
+
+```
+
+📫 Connect With Me
+​<div align="center">
+<a href="https://github.com/SolimanAnas">
+<img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://www.google.com/search?q=https://linkedin.com/in/SolimanAnas">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/LinkedIn-0077B5%3Fstyle%3Dfor-the-badge%26logo%3Dlinkedin%26logoColor%3Dwhite" />
+</a>
+</div>
+​<div align="center">
+<p>⭐ If you like my work, consider starring my repositories</p>
+<p>🚀 Always building real-world solutions</p>
+</div> 
