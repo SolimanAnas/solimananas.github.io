@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
   <br/><br/>
 
   <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
@@ -92,6 +92,7 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
+```
 
 📫 Connect With Me
 <div align="center">
