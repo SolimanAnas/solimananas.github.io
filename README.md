@@ -65,20 +65,19 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b" alt="GitHub Stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b" alt="Top Languages" />
-  <br/><br/>
-  <img src="https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b" alt="GitHub Streak" />
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b)](https://github.com/SolimanAnas)
+
 </div>
 
 ---
 
 ### 🧠 What I Build
 
-✔ Clinical tools usable under pressure
-✔ Offline-capable web apps (PWA)
-✔ Fast, minimal, no-dependency systems
-✔ Real-world EMS solutions
+- ✔️ Clinical tools usable under pressure
+- ✔️ Offline-capable web apps (PWA)
+- ✔️ Fast, minimal, no-dependency systems
+- ✔️ Real-world EMS solutions
 
 ---
 
@@ -93,3 +92,14 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
+
+📫 Connect With Me
+​<div align="center">
+<a href="https://github.com/SolimanAnas">
+<img src="https://www.google.com/search?q=https://img.shields.io/badge/GitHub-000%3Fstyle%3Dfor-the-badge%26logo%3Dgithub%26logoColor%3Dwhite" alt="GitHub" />
+</a>
+</div>
+​<div align="center">
+<p>⭐ If you like my work, consider starring my repositories</p>
+<p>🚀 Always building real-world solutions</p>
+</div>
