@@ -865,7 +865,7 @@ Designed responsive web applications optimized for mobile use during ambulance o
 <div class="gh-streak-header">
 <h3>📊 Top Languages</h3>
 </div>
-<img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" loading="lazy" />
+<img id="topLangsImg" src="https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" loading="lazy" />
 </div>
 </div>
 </section>
@@ -911,8 +911,14 @@ Designed responsive web applications optimized for mobile use during ambulance o
 <script>
 
 function toggleDark(){
-document.body.classList.toggle("dark");
-document.getElementById("themeBtn").textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+const isDark = document.body.classList.toggle("dark");
+document.getElementById("themeBtn").textContent = isDark ? "☀️" : "🌙";
+const topLangs = document.getElementById("topLangsImg");
+if(topLangs){
+topLangs.src = isDark
+? "https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff"
+: "https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=buefy&hide_border=true&bg_color=ffffff&title_color=1e3a8a&text_color=334155";
+}
 }
 
 function toggleMobile(){
@@ -936,6 +942,11 @@ if(entry.isIntersecting) entry.target.classList.add("show");
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
 if(document.body.classList.contains("dark")) document.getElementById("themeBtn").textContent = "☀️";
+// Set correct top-langs theme on load
+const topLangs = document.getElementById("topLangsImg");
+if(topLangs && !document.body.classList.contains("dark")){
+topLangs.src = "https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=buefy&hide_border=true&bg_color=ffffff&title_color=1e3a8a&text_color=334155";
+}
 
 // GitHub Analytics - enhances default images with live data if API responds
 const GH_USER = "SolimanAnas";
