@@ -427,6 +427,185 @@ box-shadow:0 8px 24px var(--shadow);
 
 .skill-card p{font-size:.85rem;color:var(--text-light);transition:color .4s ease}
 
+/* GITHUB ANALYTICS */
+.gh-analytics{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.gh-streak-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:32px;
+backdrop-filter:blur(10px);
+transition:background .4s ease,border-color .4s ease,transform .35s ease,box-shadow .4s ease;
+position:relative;
+overflow:hidden;
+}
+
+.gh-streak-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 32px var(--shadow);
+}
+
+.gh-streak-card::before{
+content:'';
+position:absolute;
+top:0;
+left:0;right:0;
+height:3px;
+background:linear-gradient(90deg,var(--accent),var(--primary),var(--accent));
+background-size:200% 100%;
+animation:shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer{
+0%,100%{background-position:0% 50%}
+50%{background-position:100% 50%}
+}
+
+.gh-streak-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-bottom:24px;
+}
+
+.gh-streak-header h3{
+font-family:'DM Serif Display',serif;
+font-size:1.05rem;
+color:var(--primary);
+font-weight:400;
+transition:color .4s ease;
+}
+
+.gh-streak-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+text-align:center;
+}
+
+.gh-stat{
+position:relative;
+padding:16px 8px;
+border-radius:10px;
+background:var(--accent-soft);
+transition:background .4s ease;
+}
+
+.gh-stat-value{
+font-family:'DM Serif Display',serif;
+font-size:1.8rem;
+font-weight:400;
+color:var(--accent);
+line-height:1.1;
+transition:color .4s ease;
+}
+
+.gh-stat-label{
+font-size:.7rem;
+font-weight:600;
+color:var(--text-light);
+text-transform:uppercase;
+letter-spacing:.06em;
+margin-top:4px;
+transition:color .4s ease;
+}
+
+.gh-contribution-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:32px;
+backdrop-filter:blur(10px);
+transition:background .4s ease,border-color .4s ease,transform .35s ease,box-shadow .4s ease;
+position:relative;
+overflow:hidden;
+}
+
+.gh-contribution-card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 32px var(--shadow);
+}
+
+.gh-contribution-card .section-line{
+margin-top:16px;
+}
+
+.gh-grid{
+display:flex;
+flex-wrap:wrap;
+gap:3px;
+justify-content:center;
+margin-bottom:12px;
+}
+
+.gh-cell{
+width:12px;
+height:12px;
+border-radius:2px;
+background:var(--border);
+transition:background .2s,transform .2s;
+}
+
+.gh-cell:hover{
+transform:scale(1.8);
+z-index:2;
+}
+
+.gh-cell.l1{background:#0e4429}
+.gh-cell.l2{background:#006d32}
+.gh-cell.l3{background:#26a641}
+.gh-cell.l4{background:#39d353}
+
+.gh-legend{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+gap:4px;
+font-size:.65rem;
+color:var(--text-light);
+transition:color .4s ease;
+}
+
+.gh-legend .gh-cell{width:10px;height:10px}
+
+.gh-loading{
+text-align:center;
+padding:20px;
+color:var(--text-light);
+font-size:.85rem;
+transition:color .4s ease;
+}
+
+.gh-loading .spinner{
+display:inline-block;
+width:20px;
+height:20px;
+border:2px solid var(--border);
+border-top-color:var(--accent);
+border-radius:50%;
+animation:spin .8s linear infinite;
+margin-right:8px;
+vertical-align:middle;
+}
+
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.gh-toplang{
+grid-column:1/-1;
+}
+
+.gh-toplang img{
+max-width:100%;
+height:auto;
+display:block;
+margin:0 auto;
+}
+
 /* CONTACT */
 .contact-grid{
 display:grid;
@@ -506,6 +685,13 @@ section{margin-bottom:44px}
 .summary-card{padding:24px}
 }
 
+@media(max-width:768px){
+.gh-analytics{grid-template-columns:1fr}
+.gh-streak-grid{grid-template-columns:repeat(3,1fr);gap:12px}
+.gh-stat-value{font-size:1.4rem}
+.gh-streak-card,.gh-contribution-card{padding:24px}
+}
+
 @media(max-width:480px){
 .cards{grid-template-columns:1fr}
 .skills-grid{grid-template-columns:1fr}
@@ -533,6 +719,7 @@ section{margin-bottom:44px}
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
+<a href="#github">GitHub</a>
 </nav>
 <div class="toggle-group">
 <button class="mobile-btn" id="mobileBtn" onclick="toggleMobile()" aria-label="Menu">
@@ -647,6 +834,47 @@ Designed responsive web applications optimized for mobile use during ambulance o
 <span class="skill-icon">🚑</span>
 <h4>Clinical</h4>
 <p>Trauma stabilization, airway management, EMS operations.</p>
+</div>
+</div>
+</section>
+
+<!-- GITHUB ANALYTICS -->
+<section id="github" class="fade">
+<div class="section-head">
+<h2 class="section-title"><small>Stats</small>GitHub Analytics</h2>
+<div class="section-line"></div>
+</div>
+<div class="gh-analytics">
+<div class="gh-streak-card">
+<div class="gh-streak-header">
+<h3>🔥 Contribution Streak</h3>
+</div>
+<div class="gh-streak-grid" id="streakData">
+<div class="gh-loading" style="grid-column:1/-1">
+<div class="spinner"></div> Loading streak data...
+</div>
+</div>
+</div>
+<div class="gh-contribution-card">
+<div class="gh-streak-header">
+<h3>📅 Activity (last year)</h3>
+</div>
+<div class="gh-grid" id="ghGrid"></div>
+<div class="gh-legend">
+<span>Less</span>
+<span class="gh-cell"></span>
+<span class="gh-cell l1"></span>
+<span class="gh-cell l2"></span>
+<span class="gh-cell l3"></span>
+<span class="gh-cell l4"></span>
+<span>More</span>
+</div>
+</div>
+<div class="gh-toplang gh-streak-card">
+<div class="gh-streak-header">
+<h3>📊 Top Languages</h3>
+</div>
+<img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" loading="lazy" />
 </div>
 </div>
 </section>
