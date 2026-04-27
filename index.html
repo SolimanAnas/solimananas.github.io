@@ -946,6 +946,78 @@ document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
 if(document.body.classList.contains("dark")) document.getElementById("themeBtn").textContent = "☀️";
 
+// GitHub Analytics
+const GITHUB_USER = "SolimanAnas";
+
+function calculateStreaks(weeks){
+const days = weeks.flat().sort((a,b) => new Date(b.date) - new Date(a.date));
+let total = 0, currentStreak = 0, longestStreak = 0, streak = 0;
+const today = new Date(); today.setHours(0,0,0,0);
+const todayStr = today.toISOString().split("T")[0];
+let foundFirstNonZero = false;
+
+for(const day of days){
+const d = new Date(day.date);
+d.setHours(0,0,0,0);
+if(day.date > todayStr) continue;
+total += day.contributionCount;
+if(day.contributionCount > 0){
+streak++;
+if(streak > longestStreak) longestStreak = streak;
+if(!foundFirstNonZero) currentStreak++;
+} else {
+if(!foundFirstNonZero) foundFirstNonZero = true;
+streak = 0;
+}
+}
+return {total, currentStreak, longestStreak};
+}
+
+function renderContributionGrid(weeks, container){
+const today = new Date(); today.setHours(0,0,0,0);
+const oneYearAgo = new Date(today); oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+const days = weeks.flat().filter(d => {
+const date = new Date(d.date);
+return date >= oneYearAgo && date <= today;
+});
+const levels = {0:"",1:"l1",2:"l2",3:"l3",4:"l4"};
+days.forEach(day => {
+const cell = document.createElement("span");
+cell.className = `gh-cell ${levels[day.contributionLevel] || ""}`;
+cell.title = `${day.contributionCount} contributions on ${day.date}`;
+container.appendChild(cell);
+});
+}
+
+async function loadGitHubStats(){
+const streakContainer = document.getElementById("streakData");
+const gridContainer = document.getElementById("ghGrid");
+try{
+const res = await fetch(`https://github-contributions-api.deno.dev/${GITHUB_USER}.json`);
+const data = await res.json();
+const {total, currentStreak, longestStreak} = calculateStreaks(data.contributions);
+streakContainer.innerHTML = `
+<div class="gh-stat">
+<div class="gh-stat-value" id="currentStreak">${currentStreak}</div>
+<div class="gh-stat-label">Current Streak<br><small style="font-size:.6rem;opacity:.6">days</small></div>
+</div>
+<div class="gh-stat">
+<div class="gh-stat-value">${longestStreak}</div>
+<div class="gh-stat-label">Longest Streak<br><small style="font-size:.6rem;opacity:.6">days</small></div>
+</div>
+<div class="gh-stat">
+<div class="gh-stat-value">${total.toLocaleString()}</div>
+<div class="gh-stat-label">Total Contributions</div>
+</div>
+`;
+renderContributionGrid(data.contributions, gridContainer);
+} catch(e){
+streakContainer.innerHTML = `<div class="gh-loading" style="grid-column:1/-1">Could not load GitHub data. <a href="https://github.com/${GITHUB_USER}" target="_blank" style="color:var(--accent)">View profile →</a></div>`;
+}
+}
+
+loadGitHubStats();
+
 </script>
 
 </body>

@@ -10,16 +10,28 @@
 ### 🖥️ Live Preview
 
 <div align="center">
-  <a href="https://solimananas.github.io/terminal.html">
-    <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="850" style="border-radius:10px;" alt="Terminal CV Preview" />
-  </a>
-  <br/><br/>
-  <a href="https://solimananas.github.io/">
-    <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="View Live CV" />
-  </a>
-  <a href="https://solimananas.github.io/terminal.html">
-    <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
-  </a>
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://solimananas.github.io/">
+          <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/live.png" width="420" style="border-radius:10px;" alt="Live CV Preview" />
+        </a>
+        <br/>
+        <a href="https://solimananas.github.io/">
+          <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="View Live CV" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://solimananas.github.io/terminal.html">
+          <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="420" style="border-radius:10px;" alt="Terminal CV Preview" />
+        </a>
+        <br/>
+        <a href="https://solimananas.github.io/terminal.html">
+          <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
+        </a>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
