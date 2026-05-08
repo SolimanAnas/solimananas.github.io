@@ -40,7 +40,7 @@ I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and preho
 - Lightweight offline-first applications
 - Translating protocols into usable systems
 
----
+----
 
 ### 🛠️ Tech Stack
 
