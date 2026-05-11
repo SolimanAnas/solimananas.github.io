@@ -1,8 +1,25 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3200&color=2563EB&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3200&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
   <br/><br/>
-  <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=2563eb&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
   <br/><br/>
+</div>
+
+---
+
+### 🖥️ Live Preview
+
+<div align="center">
+  <a href="https://solimananas.github.io/terminal.html">
+    <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="850" style="border-radius:10px;" alt="Terminal CV Preview" />
+  </a>
+  <br/><br/>
+  <a href="https://solimananas.github.io/">
+    <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="View Live CV" />
+  </a>
+  <a href="https://solimananas.github.io/terminal.html">
+    <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
+  </a>
 </div>
 
 ---
@@ -55,10 +72,10 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&icon_color=2563eb&title_color=2563eb&text_color=ffffff" alt="GitHub Stats" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=2563eb&text_color=ffffff" alt="Top Languages" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&icon_color=22c55e&title_color=22c55e&text_color=ffffff" alt="GitHub Stats" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" height="170" />
   <br/><br/>
-  <img src="https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b&ring=2563eb&fire=2563eb&currStreakLabel=2563eb" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" alt="GitHub Streak" />
 </div>
 
 ---
@@ -82,10 +99,10 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 
 <div align="center">
   <a href="https://solimananas.github.io/">
-    <img src="https://img.shields.io/badge/Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=2563eb" alt="Live CV" />
+    <img src="https://img.shields.io/badge/Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV" />
   </a>
   <a href="https://solimananas.github.io/terminal.html">
-    <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=2563eb" alt="Terminal CV" />
+    <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
   </a>
   <a href="https://github.com/SolimanAnas">
     <img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -94,7 +111,7 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
   </a>
   <a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf">
-    <img src="https://img.shields.io/badge/Download_CV-2563eb?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV" />
+    <img src="https://img.shields.io/badge/Download_CV-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV" />
   </a>
   <a href="https://wa.me/+971551788017">
     <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp" />
