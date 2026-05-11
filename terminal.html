@@ -3,390 +3,610 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Soliman Anas | Terminal Portfolio</title>
-
+<title>Soliman Anas ~ Terminal Portfolio</title>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
 <style>
-/* Base Styles */
-body {
-    background: #0b0b0b;
-    color: #d1d5db;
-    font-family: monospace;
-    margin: 0;
-    padding: 0 40px 40px 40px;
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+background:#0b0b0b;
+color:#d1d5db;
+font-family:'Courier New',Consolas,'Liberation Mono',monospace;
+font-size:15px;
+line-height:1.7;
+padding:0;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
+/* SCAN LINES */
+body::after{
+content:'';
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:9998;
+background:repeating-linear-gradient(0deg,rgba(0,0,0,.03) 0,rgba(0,0,0,.03) 2px,transparent 2px,transparent 4px);
 }
 
-/* Navigation Menu */
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    padding: 25px 0;
-    margin-bottom: 20px;
-    border-bottom: 1px dashed #1f2937;
-    position: sticky;
-    top: 0;
-    background: rgba(11, 11, 11, 0.95);
-    z-index: 100;
+/* TERMINAL WINDOW */
+.terminal{
+width:100%;
+max-width:960px;
+margin:20px;
+border:1px solid #1f2937;
+border-radius:12px;
+overflow:hidden;
+background:#0b0b0b;
+box-shadow:0 0 40px rgba(34,197,94,.04),0 20px 60px rgba(0,0,0,.5);
 }
 
-.navbar a {
-    color: #9ca3af;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.2s;
+/* TITLE BAR */
+.title-bar{
+display:flex;
+align-items:center;
+gap:10px;
+padding:12px 16px;
+background:#111;
+border-bottom:1px solid #1f2937;
+user-select:none;
 }
 
-.navbar a:hover {
-    color: #22c55e;
+.title-dots{display:flex;gap:8px}
+
+.title-dot{
+width:12px;height:12px;border-radius:50%;
+transition:opacity .2s;
 }
 
-/* Sections */
-.section {
-    border: 1px solid #1f2937;
-    padding: 25px;
-    margin-bottom: 35px;
-    background: #000;
-    scroll-margin-top: 80px;
+.title-dot:hover{opacity:.7}
+
+.title-dot.red{background:#ff5f57}
+.title-dot.yellow{background:#febc2e}
+.title-dot.green{background:#28c840}
+
+.title-text{
+color:#6b7280;
+font-size:13px;
+margin:0 auto 0 12px;
+letter-spacing:.02em;
 }
 
-/* Hero / Whoami Layout */
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+.title-text::before{content:'soliman@terminal:~$ ';color:#22c55e}
+
+/* CONTAINER */
+.container{padding:32px 32px 24px}
+
+/* NAV BAR */
+.navbar{
+display:flex;
+flex-wrap:wrap;
+gap:4px;
+padding:10px 14px;
+margin-bottom:28px;
+background:#050505;
+border:1px solid #1f2937;
+border-radius:8px;
 }
 
-.hero-text {
-    flex: 1;
+.navbar a{
+color:#6b7280;
+text-decoration:none;
+font-size:13px;
+padding:5px 12px;
+border-radius:4px;
+transition:all .2s;
+position:relative;
 }
 
-.hero-image {
-    width: 200px;
-    flex-shrink: 0;
+.navbar a::before{content:'▶ ';color:#22c55e;font-size:10px;opacity:0;transition:opacity .2s;display:inline-block;width:14px}
+
+.navbar a:hover::before,.navbar a:focus::before{opacity:1}
+
+.navbar a:hover,.navbar a:focus{color:#22c55e;background:rgba(34,197,94,.06)}
+
+/* SECTIONS */
+.section{
+border:1px solid #1f2937;
+border-radius:8px;
+padding:24px;
+margin-bottom:24px;
+background:#000;
+scroll-margin-top:24px;
+transition:border-color .4s,box-shadow .4s;
 }
 
-.hero-image img {
-    width: 100%;
-    display: block;
-    border-radius: 8px;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-    filter: grayscale(20%); 
+.section:hover{border-color:#22c55e;box-shadow:0 0 20px rgba(34,197,94,.04)}
+
+/* PROMPT */
+.prompt{
+color:#22c55e;
+margin-bottom:12px;
+font-weight:600;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:6px;
 }
 
-/* Typography & Elements */
-.prompt {
-    color: #22c55e;
-    margin-bottom: 6px;
+.prompt::after{
+content:'_';
+animation:blink 1s step-end infinite;
+font-weight:700;
+color:#22c55e;
 }
 
-/* Ensure the animated SVG scales correctly on all screens */
-.animated-subtitle {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
-    margin-bottom: 25px;
-    display: block;
+@keyframes blink{50%{opacity:0}}
+
+/* HERO */
+.hero-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:32px;
 }
 
-/* Tech Stack Badges */
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 40px;
-    margin-bottom: 25px;
+.hero-text{flex:1;min-width:0}
+
+.hero-text .prompt{margin-bottom:10px}
+
+.animated-subtitle{
+max-width:100%;
+height:auto;
+display:block;
+margin:6px 0 16px;
 }
 
-.tech-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 16px;
-    background: #050505;
-    border: 1px solid #1f2937;
-    border-radius: 6px;
-    color: #9ca3af;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    cursor: pointer;         /* Makes it feel clickable */
-    user-select: none;       /* Prevents text highlighting on rapid clicks */
+.hero-image{
+width:200px;
+flex-shrink:0;
 }
 
-.tech-badge i {
-    font-size: 18px;
-    transition: color 0.3s ease;
+.hero-image img{
+width:100%;
+display:block;
+border-radius:6px;
+-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%);
+mask-image:linear-gradient(to bottom,rgba(0,0,0,1) 50%,rgba(0,0,0,0) 100%);
+filter:grayscale(20%);
+border:1px solid #1f2937;
 }
 
-/* Badge Hover Colors */
-.tech-badge:hover { transform: translateY(-2px); color: #fff; }
-.html-badge:hover { border-color: #e34f26; }
-.html-badge:hover i { color: #e34f26; }
-.css-badge:hover { border-color: #1572b6; }
-.css-badge:hover i { color: #1572b6; }
-.js-badge:hover { border-color: #f7df1e; }
-.js-badge:hover i { color: #f7df1e; }
-.python-badge:hover { border-color: #3776ab; }
-.python-badge:hover i { color: #3776ab; }
-.node-badge:hover { border-color: #339933; }
-.node-badge:hover i { color: #339933; }
-.github-badge:hover { border-color: #ffffff; }
-.github-badge:hover i { color: #ffffff; }
-.ps-badge:hover { border-color: #31a8ff; }
-.ps-badge:hover i { color: #31a8ff; }
-
-/* Action Buttons (Centered below tech stack) */
-.action-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 20px;
+/* TECH STACK */
+.tech-stack{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-top:28px;
 }
 
-.action-btn {
-    border: 1px solid #22c55e;
-    color: #22c55e;
-    padding: 8px 16px; /* Made smaller */
-    text-decoration: none;
-    font-size: 13px;   /* Made font slightly smaller */
-    border-radius: 4px;
-    transition: all 0.2s;
-    background: transparent;
+.tech-badge{
+display:flex;
+align-items:center;
+gap:7px;
+padding:7px 14px;
+background:#050505;
+border:1px solid #1f2937;
+border-radius:5px;
+color:#9ca3af;
+font-size:13px;
+transition:all .25s;
+cursor:default;
 }
 
-.action-btn:hover {
-    background: rgba(34, 197, 94, 0.1);
+.tech-badge i{font-size:17px;transition:color .25s}
+
+.tech-badge:hover{transform:translateY(-2px);color:#fff}
+
+.html-badge:hover{border-color:#e34f26;box-shadow:0 0 12px rgba(227,79,38,.12)}
+.html-badge:hover i{color:#e34f26}
+.css-badge:hover{border-color:#1572b6;box-shadow:0 0 12px rgba(21,114,182,.12)}
+.css-badge:hover i{color:#1572b6}
+.js-badge:hover{border-color:#f7df1e;box-shadow:0 0 12px rgba(247,223,30,.12)}
+.js-badge:hover i{color:#f7df1e}
+.python-badge:hover{border-color:#3776ab;box-shadow:0 0 12px rgba(55,118,171,.12)}
+.python-badge:hover i{color:#3776ab}
+.node-badge:hover{border-color:#339933;box-shadow:0 0 12px rgba(51,153,51,.12)}
+.node-badge:hover i{color:#339933}
+.github-badge:hover{border-color:#fff;box-shadow:0 0 12px rgba(255,255,255,.08)}
+.github-badge:hover i{color:#fff}
+.ps-badge:hover{border-color:#31a8ff;box-shadow:0 0 12px rgba(49,168,255,.12)}
+.ps-badge:hover i{color:#31a8ff}
+
+/* ACTION BUTTONS */
+.action-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-top:20px;
 }
 
-/* Projects & Skills */
-.project {
-    border: 1px solid #1f2937;
-    padding: 18px;
-    margin-bottom: 18px;
-    background: #050505;
+.action-btn{
+border:1px solid #22c55e;
+color:#22c55e;
+padding:7px 16px;
+text-decoration:none;
+font-size:13px;
+border-radius:4px;
+transition:all .25s;
+background:transparent;
+cursor:pointer;
+font-family:inherit;
 }
 
-.project-title {
-    color: #22c55e;
-    font-size: 18px;
-    margin-bottom: 6px;
+.action-btn:hover{
+background:rgba(34,197,94,.08);
+box-shadow:0 0 16px rgba(34,197,94,.06);
 }
 
-.skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+/* PROJECTS */
+.project{
+border:1px solid #1f2937;
+border-radius:6px;
+padding:18px;
+margin-bottom:14px;
+background:#050505;
+transition:border-color .3s;
 }
 
-.skill-box {
-    border: 1px solid #1f2937;
-    padding: 18px;
-    background: #050505;
+.project:last-child{margin-bottom:0}
+
+.project:hover{border-color:#22c55e}
+
+.project-title{
+color:#22c55e;
+font-size:16px;
+margin-bottom:4px;
 }
 
-ul {
-    margin-top: 10px;
-    padding-left: 18px;
+.project-title::before{content:'📁 ';font-size:14px}
+
+.project p{color:#9ca3af;font-size:14px;margin-bottom:12px;line-height:1.6}
+
+.project .action-btn{font-size:12px;padding:5px 12px;display:inline-block}
+
+/* SKILLS */
+.skills{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:16px;
 }
 
-footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #6b7280;
-    font-size: 14px;
+.skill-box{
+border:1px solid #1f2937;
+border-radius:6px;
+padding:18px;
+background:#050505;
+transition:border-color .3s;
 }
 
-/* =========================================
-   📱 Mobile Responsiveness
-   ========================================= */
-@media(max-width: 768px) {
-    body { 
-        padding: 0 15px 20px 15px; 
-    }
-    
-    .section { 
-        padding: 20px 15px; 
-        scroll-margin-top: 100px; 
-    }
+.skill-box:hover{border-color:#22c55e}
 
-    .navbar { 
-        flex-wrap: wrap; 
-        gap: 10px 15px; 
-        padding: 15px 0;
-    }
-    .navbar a { 
-        font-size: 14px; 
-    }
+.skill-box strong{color:#22c55e;font-size:14px;display:block;margin-bottom:6px}
 
-    .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 15px;
-    }
-    
-    .hero-image { 
-        width: 130px; 
-        margin: 0 auto;
-    }
+.skill-box strong::before{content:'> ';opacity:.6}
 
-    .skills { 
-        grid-template-columns: 1fr; 
-        gap: 15px;
-    }
-    
-    .tech-badge {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-    
-    /* Keep action buttons horizontal on mobile */
-    .action-buttons { 
-        flex-direction: row; 
-        gap: 8px;
-    }
-    .action-btn { 
-        padding: 6px 10px; 
-        font-size: 12px; 
-    }
+.skill-box ul{
+list-style:none;
+padding:0;
+margin:0;
 }
+
+.skill-box li{
+color:#9ca3af;
+font-size:13px;
+padding:3px 0 3px 16px;
+position:relative;
+}
+
+.skill-box li::before{
+content:'∙';
+color:#22c55e;
+position:absolute;
+left:4px;
+}
+
+/* BAR CHARTS */
+.skill-bar{margin-top:8px}
+
+.skill-bar-track{
+height:4px;
+background:#1f2937;
+border-radius:2px;
+overflow:hidden;
+margin-top:3px;
+}
+
+.skill-bar-fill{
+height:100%;
+background:#22c55e;
+border-radius:2px;
+width:0;
+transition:width .8s ease;
+box-shadow:0 0 6px rgba(34,197,94,.3);
+}
+
+/* CONTACT */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:10px;
+padding:10px 14px;
+background:#050505;
+border:1px solid #1f2937;
+border-radius:5px;
+font-size:14px;
+color:#9ca3af;
+transition:border-color .3s;
+}
+
+.contact-item:hover{border-color:#22c55e}
+
+.contact-item a{
+color:#22c55e;
+text-decoration:none;
+transition:opacity .2s;
+}
+
+.contact-item a:hover{opacity:.7;text-decoration:underline}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:24px 0 8px;
+color:#6b7280;
+font-size:13px;
+}
+
+footer span{color:#22c55e}
+
+/* ASCII DIVIDER */
+.ascii-divider{
+color:#1f2937;
+font-size:12px;
+text-align:center;
+margin:0 0 20px;
+letter-spacing:.1em;
+user-select:none;
+}
+
+/* SCROLL ANIMATIONS */
+.fade-in{
+opacity:0;
+transform:translateY(16px);
+transition:opacity .6s ease,transform .6s ease;
+}
+
+.fade-in.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#0b0b0b}
+::-webkit-scrollbar-thumb{background:#1f2937;border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:#22c55e}
+
+/* SELECTION */
+::selection{background:rgba(34,197,94,.25);color:#fff}
+
+/* MOBILE */
+@media(max-width:768px){
+.terminal{margin:10px;border-radius:8px}
+.container{padding:20px 16px}
+.title-bar{padding:10px 14px}
+.title-dot{width:10px;height:10px}
+.title-text{font-size:11px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.title-text::before{content:'soliman@terminal:~$ ';font-size:11px}
+.navbar{gap:2px;padding:8px 10px}
+.navbar a{font-size:12px;padding:4px 8px}
+.navbar a::before{display:none}
+.section{padding:18px;margin-bottom:16px}
+.hero-container{flex-direction:column-reverse;text-align:center;gap:16px}
+.hero-image{width:130px;margin:0 auto}
+.skills{grid-template-columns:1fr;gap:12px}
+.tech-badge{padding:5px 10px;font-size:12px}
+.action-btn{padding:6px 12px;font-size:12px}
+.contact-grid{grid-template-columns:1fr}
+.ascii-divider{font-size:9px;overflow:hidden}
+}
+
+@media(max-width:480px){
+.terminal{margin:6px;border-radius:6px}
+.container{padding:14px 12px}
+.title-bar{padding:8px 12px}
+.title-text{font-size:10px}
+.title-text::before{content:'$ ';font-size:10px}
+.navbar a{font-size:11px;padding:3px 6px}
+.section{padding:14px}
+}
+
+/* CRT GLOW */
+@keyframes crt-glow{0%,100%{text-shadow:0 0 4px rgba(34,197,94,.3)}50%{text-shadow:0 0 8px rgba(34,197,94,.15)}}
+
+.prompt{animation:crt-glow 3s ease-in-out infinite}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+.fade-in{opacity:1;transform:none}
+.prompt::after{display:none}
+}
+
 </style>
 </head>
 <body>
 
+<div class="terminal" role="main">
+
+<div class="title-bar">
+<div class="title-dots">
+<span class="title-dot red"></span>
+<span class="title-dot yellow"></span>
+<span class="title-dot green"></span>
+</div>
+<span class="title-text"></span>
+</div>
+
 <div class="container">
 
-<nav class="navbar">
-    <a href="#home">./home</a>
-    <a href="#about">./about</a>
-    <a href="#projects">./projects</a>
-    <a href="#skills">./skills</a>
-    <a href="#contact">./contact</a>
+<nav class="navbar" aria-label="Terminal navigation">
+<a href="#home">home</a>
+<a href="#about">about</a>
+<a href="#projects">projects</a>
+<a href="#skills">skills</a>
+<a href="#contact">contact</a>
 </nav>
 
-<div class="section" id="home">
-    <div class="hero-container">
-        <div class="hero-text">
-            <div class="prompt">$ whoami</div>
-            <img class="animated-subtitle" src="https://camo.githubusercontent.com/e68152d3c596fac6d8baca78fcb2961b57780c21ae3482c4940b7d983cf7d335/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f73697a653d3238266475726174696f6e3d3330303026636f6c6f723d3232433535452663656e7465723d74727565267643656e7465723d747275652677696474683d383030266c696e65733d536f6c696d616e2b416e61732b536f6c696d616e3b524e2b2537432b506172616d656469632b2537432b5765622b446576656c6f7065723b436c696e6963616c2b53797374656d732b4275696c6465723b4272696467696e672b4d65646963696e652b2532362b546563686e6f6c6f6779" alt="Soliman Anas - RN | Paramedic | Web Developer">
-        </div>
-        
-        <div class="hero-image">
-            <img src="CV/photo.png" alt="Soliman Anas">
-        </div>
-    </div>
+<!-- HOME -->
+<div class="section fade-in" id="home">
+<div class="hero-container">
+<div class="hero-text">
+<div class="prompt">$ whoami</div>
+<img class="animated-subtitle" src="https://camo.githubusercontent.com/e68152d3c596fac6d8baca78fcb2961b57780c21ae3482c4940b7d983cf7d335/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f73697a653d3238266475726174696f6e3d3330303026636f6c6f723d3232433535452663656e7465723d74727565267643656e7465723d747275652677696474683d383030266c696e65733d536f6c696d616e2b416e61732b536f6c696d616e3b524e2b2537432b506172616d656469632b2537432b5765622b446576656c6f7065723b436c696e6963616c2b53797374656d732b4275696c6465723b4272696467696e672b4d65646963696e652b2532362b546563686e6f6c6f6779" alt="Soliman Anas - RN | Paramedic | Web Developer">
 
-    <div class="tech-stack">
-        <div class="tech-badge html-badge">
-            <i class="devicon-html5-plain"></i> HTML
-        </div>
-        <div class="tech-badge css-badge">
-            <i class="devicon-css3-plain"></i> CSS
-        </div>
-        <div class="tech-badge js-badge">
-            <i class="devicon-javascript-plain"></i> JavaScript
-        </div>
-        <div class="tech-badge python-badge">
-            <i class="devicon-python-plain"></i> Python
-        </div>
-        <div class="tech-badge node-badge">
-            <i class="devicon-nodejs-plain"></i> Node.js
-        </div>
-        <div class="tech-badge github-badge">
-            <i class="devicon-github-original"></i> GitHub
-        </div>
-        <div class="tech-badge ps-badge">
-            <i class="devicon-photoshop-plain"></i> Photoshop
-        </div>
-    </div>
-
-    <div class="action-buttons">
-        <a href="#projects" class="action-btn">View Projects</a>
-        <a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" class="action-btn">View CV</a>
-        <a href="#contact" class="action-btn">Contact Me</a>
-    </div>
+<div class="tech-stack">
+<div class="tech-badge html-badge"><i class="devicon-html5-plain"></i> HTML</div>
+<div class="tech-badge css-badge"><i class="devicon-css3-plain"></i> CSS</div>
+<div class="tech-badge js-badge"><i class="devicon-javascript-plain"></i> JavaScript</div>
+<div class="tech-badge python-badge"><i class="devicon-python-plain"></i> Python</div>
+<div class="tech-badge node-badge"><i class="devicon-nodejs-plain"></i> Node.js</div>
+<div class="tech-badge github-badge"><i class="devicon-github-original"></i> GitHub</div>
+<div class="tech-badge ps-badge"><i class="devicon-photoshop-plain"></i> Photoshop</div>
 </div>
 
-<div class="section" id="about">
-    <div class="prompt">$ cat about.txt</div>
-    <p>Medical professional with more than 10 years of experience in emergency and prehospital care. I build digital solutions that improve accessibility of clinical protocols and operational workflow in EMS environments. Currently working on web-based clinical tools and exploring AI applications for healthcare.</p>
+<div class="action-buttons">
+<a href="#projects" class="action-btn">$ cd projects</a>
+<a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" class="action-btn">$ cat cv.pdf</a>
+<a href="#contact" class="action-btn">$ ./connect</a>
+</div>
+</div>
+<div class="hero-image">
+<img src="CV/photo.png" alt="Soliman Anas">
+</div>
+</div>
 </div>
 
-<div class="section" id="projects">
-    <div class="prompt">$ ls projects/</div>
-    
-    <div class="project">
-        <div class="project-title">DCAS Smart CPG</div>
-        <p>Clinical Practice Guidelines Progressive Web App designed for EMS crews to access treatment protocols quickly during emergency response.</p>
-        <a class="action-btn" href="https://cpg.qzz.io/" target="_blank" style="padding: 6px 12px; font-size: 12px; margin-top: 10px; display: inline-block;">Open Project</a>
-    </div>
-
-    <div class="project">
-        <div class="project-title">Zad Al-Muslim</div>
-        <p>Islamic digital assistant including Tasbeeh counter and useful Muslim tools.</p>
-        <a class="action-btn" href="https://solimananas.github.io/Tasbee7/" target="_blank" style="padding: 6px 12px; font-size: 12px; margin-top: 10px; display: inline-block;">Open Project</a>
-    </div>
+<!-- ABOUT -->
+<div class="section fade-in" id="about">
+<div class="prompt">$ cat about.txt</div>
+<p style="color:#9ca3af;font-size:14px;line-height:1.8">Medical professional with more than 10 years of experience in emergency and prehospital care. I build digital solutions that improve accessibility of clinical protocols and operational workflow in EMS environments. Currently working on web-based clinical tools and exploring AI applications for healthcare.</p>
 </div>
 
-<div class="section" id="skills">
-    <div class="prompt">$ ls skills/</div>
-    <div class="skills">
-        
-        <div class="skill-box">
-            <strong>Frontend</strong>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Progressive Web Apps</li>
-            </ul>
-        </div>
+<!-- PROJECTS -->
+<div class="section fade-in" id="projects">
+<div class="prompt">$ ls -la projects/</div>
+<div class="ascii-divider">total 2</div>
 
-        <div class="skill-box">
-            <strong>Backend & Scripting</strong>
-            <ul>
-                <li>Python</li>
-                <li>Node.js</li>
-                <li>REST APIs</li>
-                <li>GitHub Pages</li>
-            </ul>
-        </div>
-
-        <div class="skill-box">
-            <strong>Clinical & IT Support</strong>
-            <ul>
-                <li>System Auditing</li>
-                <li>End-User Tech Support</li>
-                <li>EMS Operations</li>
-            </ul>
-        </div>
-        
-    </div>
+<div class="project">
+<div class="project-title">dcas-smart-cpg</div>
+<p>Clinical Practice Guidelines Progressive Web App designed for EMS crews to access treatment protocols quickly during emergency response.</p>
+<a class="action-btn" href="https://cpg.qzz.io/" target="_blank">$ open project</a>
 </div>
 
-<div class="section" id="contact">
-    <div class="prompt">$ contact</div>
-    <p>📍 Ajman, UAE</p>
-    <p>📞 +971 55 178 8017</p>
-    <p>✉ Ssoliman@dcas.gov.ae</p>
-    <br>
-    <p>🔗 <a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank" style="color: #22c55e;">LinkedIn Profile</a></p>
-    <p>🔗 <a href="https://github.com/SolimanAnas" target="_blank" style="color: #22c55e;">GitHub Repository</a></p>
+<div class="project">
+<div class="project-title">zad-al-muslim</div>
+<p>Islamic digital assistant including Tasbeeh counter and useful Muslim tools.</p>
+<a class="action-btn" href="https://solimananas.github.io/Tasbee7/" target="_blank">$ open project</a>
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section fade-in" id="skills">
+<div class="prompt">$ tree skills/</div>
+<div class="ascii-divider">.</div>
+
+<div class="skills">
+
+<div class="skill-box">
+<strong>frontend</strong>
+<ul>
+<li>HTML &amp; CSS</li>
+<li>JavaScript</li>
+<li>Progressive Web Apps</li>
+</ul>
+<div class="skill-bar">
+<span style="color:#6b7280;font-size:11px;">proficiency</span>
+<div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+</div>
+</div>
+
+<div class="skill-box">
+<strong>backend</strong>
+<ul>
+<li>Python</li>
+<li>Node.js</li>
+<li>REST APIs</li>
+<li>GitHub Pages</li>
+</ul>
+<div class="skill-bar">
+<span style="color:#6b7280;font-size:11px;">proficiency</span>
+<div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%"></div></div>
+</div>
+</div>
+
+<div class="skill-box">
+<strong>clinical-it</strong>
+<ul>
+<li>System Auditing</li>
+<li>End-User Tech Support</li>
+<li>EMS Operations</li>
+</ul>
+<div class="skill-bar">
+<span style="color:#6b7280;font-size:11px;">proficiency</span>
+<div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- CONTACT -->
+<div class="section fade-in" id="contact">
+<div class="prompt">$ cat .contact</div>
+<div class="contact-grid">
+<div class="contact-item"><span>📍</span> <span>Ajman, UAE</span></div>
+<div class="contact-item"><span>📞</span> <span>+971 55 178 8017</span></div>
+<div class="contact-item"><span>✉</span> <span>Ssoliman@dcas.gov.ae</span></div>
+<div class="contact-item"><span>🔗</span> <a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank">LinkedIn</a></div>
+<div class="contact-item"><span>💻</span> <a href="https://github.com/SolimanAnas" target="_blank">GitHub</a></div>
+</div>
 </div>
 
 <footer>
-    $ echo "© 2026 Soliman Anas Soliman"
+<span>$</span> echo "&copy; 2026 Soliman Anas Soliman"<br>
+<span style="color:#6b7280;font-size:12px;">[exit code 0]</span>
 </footer>
 
 </div>
+
+</div>
+
+<script>
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if(entry.isIntersecting) entry.target.classList.add("show");
+});
+},{threshold:0.08});
+
+document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+</script>
 
 </body>
 </html>
