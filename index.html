@@ -1,353 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Soliman Anas Soliman | Medical Systems Support</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
 
 :root{
-
 --primary:#1e3a8a;
 --accent:#2563eb;
+--accent-light:#3b82f6;
+--accent-soft:rgba(37,99,235,0.08);
 --text:#1e293b;
+--text-light:#64748b;
 --card:rgba(255,255,255,0.35);
 --border:#e2e8f0;
-
+--shadow:rgba(30,58,138,0.08);
+--toggle-bg:#e2e8f0;
 --bg-image:url("https://raw.githubusercontent.com/SolimanAnas/Tasbee7/main/images/Background-light.png");
-
 }
 
 .dark{
-
 --primary:#60a5fa;
 --accent:#3b82f6;
+--accent-light:#93c5fd;
+--accent-soft:rgba(59,130,246,0.1);
 --text:#f1f5f9;
+--text-light:#94a3b8;
 --card:rgba(15,23,42,0.45);
 --border:#334155;
-
+--shadow:rgba(0,0,0,0.2);
+--toggle-bg:#334155;
 --bg-image:url("https://raw.githubusercontent.com/SolimanAnas/Tasbee7/main/images/Background-dark.png");
-
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
-}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+
+html{scroll-behavior:smooth}
 
 body{
-
+font-family:'DM Sans',sans-serif;
 background-image:var(--bg-image);
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
-
 color:var(--text);
-
-transition:
-background-image 0.6s ease,
-color 0.4s ease;
-
+line-height:1.7;
+transition:color .4s ease,background-image .6s ease;
+min-height:100vh;
 }
 
+/* OVERLAY */
 .overlay{
-
 background:rgba(255,255,255,0.7);
 min-height:100vh;
-
-transition: background 0.4s ease;
-
+transition:background .4s ease;
 }
 
 .dark .overlay{
-
 background:rgba(15,23,42,0.7);
-
 }
 
 .container{
-
 max-width:1100px;
-margin:auto;
-padding:30px 20px;
-
+margin:0 auto;
+padding:0 24px;
 }
 
+/* TYPOGRAPHY */
+h1,h2,h3,h4{
+font-family:'DM Serif Display',serif;
+color:var(--primary);
+font-weight:400;
+line-height:1.2;
+transition:color .4s ease;
+}
+
+h1{font-size:clamp(2rem,4.5vw,3rem)}
+h2{font-size:clamp(1.4rem,2.8vw,1.9rem)}
+h3{font-size:1.2rem}
+h4{font-size:1.05rem}
+
 /* HEADER */
-
 header{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:50px;
-
-transition: color 0.4s ease;
-
+padding:20px 0 18px;
+border-bottom:1px solid var(--border);
+margin-bottom:56px;
+transition:border-color .4s ease;
 }
 
 .logo{
-
-font-size:22px;
-font-weight:700;
+font-family:'DM Serif Display',serif;
+font-size:1.3rem;
+font-weight:400;
 color:var(--primary);
-
-transition: color 0.4s ease;
-
+letter-spacing:-.01em;
+transition:color .4s ease;
 }
+
+.logo span{color:var(--accent);transition:color .4s ease}
+
+nav{display:flex;align-items:center;gap:4px}
 
 nav a{
-
-margin-left:20px;
-text-decoration:none;
-color:var(--text);
+font-size:.875rem;
 font-weight:500;
-
-transition: color 0.4s ease;
-
-}
-
-nav a:hover{
-
-color:var(--accent);
-
-}
-
-.toggle{
-
-cursor:pointer;
-border:1px solid var(--border);
-padding:6px 12px;
+color:var(--text);
+text-decoration:none;
+padding:6px 14px;
 border-radius:8px;
-
-transition: border-color 0.4s ease;
-
+transition:color .3s,background .3s;
 }
+
+nav a:hover{color:var(--accent);background:var(--accent-soft)}
+
+.toggle-group{display:flex;align-items:center;gap:6px}
+
+.theme-btn{
+background:var(--toggle-bg);
+border:none;
+cursor:pointer;
+width:38px;
+height:38px;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1rem;
+transition:background .4s ease,transform .3s;
+}
+
+.theme-btn:hover{transform:scale(1.1)}
+
+.mobile-btn{
+display:none;
+background:none;
+border:none;
+cursor:pointer;
+width:38px;
+height:38px;
+border-radius:10px;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:5px;
+}
+
+.mobile-btn span{
+display:block;
+width:18px;
+height:2px;
+background:var(--primary);
+border-radius:2px;
+transition:transform .3s,opacity .3s,background .4s ease;
+}
+
+.mobile-btn.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.mobile-btn.active span:nth-child(2){opacity:0}
+.mobile-btn.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
 /* HERO */
-
 .hero{
-
 display:grid;
 grid-template-columns:300px 1fr;
-gap:40px;
+gap:48px;
 align-items:center;
-margin-bottom:60px;
-
+margin-bottom:64px;
 }
-
-/* PROFILE IMAGE (NO FORMAT) */
 
 .profile-img{
-
 max-width:280px;
 height:auto;
-
+display:block;
 }
 
-/* BUTTON */
+.hero-content{min-width:0}
 
-.btn{
+.hero h1{margin-bottom:4px}
 
-display:inline-block;
+.hero-role{
+font-size:1rem;
+color:var(--accent);
+font-weight:500;
+margin-bottom:16px;
+transition:color .4s ease;
+}
+
+.hero-desc{
+font-size:.95rem;
+color:var(--text-light);
+margin-bottom:20px;
+max-width:560px;
+transition:color .4s ease;
+}
+
+.hero-divider{
+width:48px;
+height:3px;
 background:var(--accent);
-color:white;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-margin-top:12px;
-
-transition: background 0.4s ease;
-
+border-radius:2px;
+margin-bottom:18px;
+transition:background .4s ease;
 }
+
+/* BUTTONS */
+.btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+background:var(--accent);
+color:#fff;
+font-weight:600;
+font-size:.875rem;
+padding:12px 24px;
+border-radius:10px;
+text-decoration:none;
+transition:background .3s,transform .3s,box-shadow .3s;
+box-shadow:0 4px 14px rgba(37,99,235,.25);
+}
+
+.btn:hover{
+background:var(--primary);
+transform:translateY(-2px);
+box-shadow:0 8px 24px rgba(30,58,138,.25);
+}
+
+.btn svg{
+width:16px;
+height:16px;
+fill:none;
+stroke:currentColor;
+stroke-width:2;
+stroke-linecap:round;
+stroke-linejoin:round;
+transition:transform .3s;
+}
+
+.btn:hover svg{transform:translateX(3px)}
 
 /* SECTIONS */
+section{margin-bottom:60px}
 
-section{
-
-margin-bottom:60px;
-
+.section-head{
+display:flex;
+align-items:center;
+gap:16px;
+margin-bottom:24px;
 }
 
-.section-title{
+.section-line{
+flex:1;
+height:1px;
+background:linear-gradient(90deg,var(--border),transparent);
+transition:background .4s ease;
+}
 
-font-size:24px;
-margin-bottom:20px;
-color:var(--primary);
+.section-title small{
+font-family:'DM Sans',sans-serif;
+font-size:.75rem;
+font-weight:600;
+color:var(--accent);
+letter-spacing:.08em;
+text-transform:uppercase;
+display:block;
+margin-bottom:2px;
+transition:color .4s ease;
+}
 
-transition: color 0.4s ease;
+/* SUMMARY CARD */
+.summary-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:14px;
+padding:32px;
+backdrop-filter:blur(10px);
+position:relative;
+overflow:hidden;
+transition:background .4s ease,border-color .4s ease;
+}
 
+.summary-card::before{
+content:'';
+position:absolute;
+left:0;
+top:0;
+bottom:0;
+width:4px;
+background:linear-gradient(180deg,var(--accent),var(--primary));
+transition:background .4s ease;
+}
+
+.summary-card p{
+font-size:.95rem;
+line-height:1.8;
+color:var(--text);
+transition:color .4s ease;
 }
 
 /* CARDS */
-
 .cards{
-
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
 }
 
 .card{
-
 background:var(--card);
-padding:20px;
-border-radius:12px;
 border:1px solid var(--border);
+border-radius:14px;
+padding:28px;
 backdrop-filter:blur(10px);
-
-transition:
-transform .2s,
-background .4s ease,
-border-color .4s ease;
-
+transition:transform .35s ease,background .4s ease,border-color .4s ease,box-shadow .4s ease;
 }
 
 .card:hover{
-
 transform:translateY(-5px);
-
+box-shadow:0 12px 32px var(--shadow);
 }
 
-.card h3{
+.card-icon{font-size:1.6rem;margin-bottom:12px;display:block}
 
-margin-bottom:10px;
+.card h3{color:var(--primary);margin-bottom:8px;transition:color .4s ease}
 
-}
+.card p{font-size:.9rem;color:var(--text-light);margin-bottom:16px;transition:color .4s ease}
 
-.card a{
-
+.card-link{
+display:inline-flex;
+align-items:center;
+gap:6px;
+font-size:.875rem;
+font-weight:600;
 color:var(--accent);
 text-decoration:none;
-
-transition: color 0.4s ease;
-
+transition:gap .3s,color .3s;
 }
 
+.card-link:hover{gap:10px;color:var(--primary)}
+
 /* TIMELINE */
-
 .timeline{
+position:relative;
+padding-left:28px;
+}
 
-border-left:3px solid var(--accent);
-padding-left:20px;
-
-transition: border-color 0.4s ease;
-
+.timeline::before{
+content:'';
+position:absolute;
+left:7px;
+top:8px;
+bottom:8px;
+width:2px;
+background:linear-gradient(180deg,var(--accent),var(--primary),transparent);
+transition:background .4s ease;
 }
 
 .timeline-item{
-
-margin-bottom:30px;
-
+position:relative;
+margin-bottom:32px;
+padding-left:20px;
 }
 
-.timeline-item h4{
+.timeline-item:last-child{margin-bottom:0}
 
-font-size:18px;
-
+.timeline-item::before{
+content:'';
+position:absolute;
+left:-24px;
+top:6px;
+width:12px;
+height:12px;
+border-radius:50%;
+background:var(--accent);
+border:3px solid transparent;
+box-shadow:0 0 0 2px var(--accent);
+transition:background .4s ease,box-shadow .4s ease,transform .3s;
 }
 
-.timeline-item span{
-
-font-size:14px;
-opacity:.8;
-
+.dark .timeline-item::before{
+border-color:transparent;
 }
+
+.timeline-item:hover::before{transform:scale(1.25)}
+
+.timeline-item h4{color:var(--primary);margin-bottom:2px;transition:color .4s ease}
+
+.timeline-item .date{
+display:inline-block;
+font-size:.8rem;
+font-weight:600;
+color:var(--accent);
+margin-bottom:8px;
+letter-spacing:.02em;
+transition:color .4s ease;
+}
+
+.timeline-item p{font-size:.9rem;color:var(--text-light);transition:color .4s ease}
 
 /* SKILLS */
-
-.skills{
-
+.skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-
 }
 
-.skill-box{
-
+.skill-card{
 background:var(--card);
 border:1px solid var(--border);
-padding:18px;
-border-radius:10px;
+border-radius:12px;
+padding:24px;
 backdrop-filter:blur(10px);
-
-transition:
-background .4s ease,
-border-color .4s ease;
-
+transition:transform .3s,background .4s ease,border-color .4s ease,box-shadow .4s ease;
 }
+
+.skill-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 24px var(--shadow);
+}
+
+.skill-icon{font-size:1.8rem;margin-bottom:10px;display:block}
+
+.skill-card h4{color:var(--primary);margin-bottom:4px;transition:color .4s ease}
+
+.skill-card p{font-size:.85rem;color:var(--text-light);transition:color .4s ease}
+
+/* CONTACT */
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:14px;
+}
+
+.contact-item{
+display:flex;
+align-items:center;
+gap:14px;
+background:var(--card);
+border:1px solid var(--border);
+border-radius:10px;
+padding:14px 18px;
+backdrop-filter:blur(10px);
+transition:background .4s ease,border-color .4s ease,transform .3s;
+}
+
+.contact-item:hover{transform:translateY(-2px)}
+
+.contact-icon{font-size:1.1rem;flex-shrink:0}
+
+.contact-item p{font-size:.9rem;color:var(--text);transition:color .4s ease}
+
+.contact-item a{
+color:var(--accent);
+font-weight:500;
+text-decoration:none;
+transition:color .3s;
+}
+
+.contact-item a:hover{color:var(--primary)}
 
 /* FOOTER */
-
 footer{
-
 text-align:center;
-margin-top:60px;
-font-size:14px;
-opacity:.8;
-
-transition: color 0.4s ease;
-
+padding:32px 0 40px;
+border-top:1px solid var(--border);
+margin-top:8px;
+transition:border-color .4s ease;
 }
 
-/* ANIMATION */
+footer p{
+font-size:.8rem;
+color:var(--text-light);
+opacity:.7;
+transition:color .4s ease;
+}
 
+/* SCROLL ANIMATIONS */
 .fade{
-
 opacity:0;
-transform:translateY(25px);
-transition:all .7s ease;
-
+transform:translateY(28px);
+transition:opacity .7s ease,transform .7s ease;
 }
 
 .fade.show{
-
 opacity:1;
-transform:none;
-
+transform:translateY(0);
 }
 
 /* MOBILE */
-
-@media(max-width:700px){
-
-.hero{
-
-grid-template-columns:1fr;
-text-align:center;
-
+@media(max-width:768px){
+header{margin-bottom:40px;padding:16px 0}
+.container{padding:0 16px}
+nav{display:none;position:fixed;top:66px;left:0;right:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);flex-direction:column;padding:12px;gap:4px;transition:background .4s ease,border-color .4s ease;z-index:100}
+.dark nav{background:rgba(15,23,42,0.9)}
+nav.open{display:flex}
+nav a{width:100%;padding:10px 14px}
+.mobile-btn{display:flex}
+.hero{grid-template-columns:1fr;gap:32px;margin-bottom:48px;text-align:center}
+.hero-desc{margin-left:auto;margin-right:auto}
+.hero-divider{margin-left:auto;margin-right:auto}
+.profile-img{margin:0 auto;max-width:220px}
+section{margin-bottom:44px}
+.summary-card{padding:24px}
 }
 
-nav{
-
-display:none;
-
+@media(max-width:480px){
+.cards{grid-template-columns:1fr}
+.skills-grid{grid-template-columns:1fr}
+.contact-grid{grid-template-columns:1fr}
 }
 
-.profile-img{
-
-max-width:220px;
-margin:auto;
-
-}
-
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+.fade{opacity:1;transform:none}
 }
 
 </style>
-
 </head>
-
-
 <body>
 
 <div class="overlay">
@@ -355,301 +527,198 @@ margin:auto;
 <div class="container">
 
 <header>
-
-<div class="logo">Soliman Anas</div>
-
-<nav>
-
+<div class="logo">Soliman<span>.</span>Anas</div>
+<nav id="nav">
 <a href="#projects">Projects</a>
 <a href="#experience">Experience</a>
 <a href="#skills">Skills</a>
 <a href="#contact">Contact</a>
-
 </nav>
-
-<div class="toggle" onclick="toggleDark()">🌙</div>
-
+<div class="toggle-group">
+<button class="mobile-btn" id="mobileBtn" onclick="toggleMobile()" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+<button class="theme-btn" onclick="toggleDark()" aria-label="Toggle theme" id="themeBtn">🌙</button>
+</div>
 </header>
 
-
-
+<!-- HERO -->
 <div class="hero fade">
-
 <img class="profile-img" src="https://raw.githubusercontent.com/SolimanAnas/CPG-2025/main/images/image-01.png" alt="Soliman Anas Soliman">
-
-<div>
-
+<div class="hero-content">
 <h1>Soliman Anas Soliman</h1>
-
-<p>RN | EMT | Medical Systems Support | Web Developer</p>
-
+<p class="hero-role">RN &middot; EMT &middot; Medical Systems Support &middot; Web Developer</p>
+<div class="hero-divider"></div>
+<p class="hero-desc">Medical professional with more than 10 years of frontline pre-hospital experience combined with strong technical skills in web development, digital clinical tools, and systems support.</p>
 <a class="btn" href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank">
-
 Download CV
-
+<svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M15 18l6-6-6-6"/></svg>
 </a>
-
+</div>
 </div>
 
-</div>
-
-
-
+<!-- SUMMARY -->
 <section class="fade">
-
-<h2 class="section-title">Professional Summary</h2>
-
+<div class="section-head">
+<h2 class="section-title"><small>About</small>Professional Summary</h2>
+<div class="section-line"></div>
+</div>
+<div class="summary-card">
 <p>
-
 Medical professional with more than 10 years of frontline pre-hospital experience combined with strong technical skills in web development, digital clinical tools, and systems support.
-
+<br><br>
 Developed and deployed a digital Clinical Practice Guidelines platform to improve accessibility of treatment protocols for EMS field staff.
-
+<br><br>
 Designed responsive web applications optimized for mobile use during ambulance operations.
-
 </p>
-
+</div>
 </section>
 
-
-
+<!-- PROJECTS -->
 <section id="projects" class="fade">
-
-<h2 class="section-title">Technical Projects</h2>
-
+<div class="section-head">
+<h2 class="section-title"><small>Work</small>Technical Projects</h2>
+<div class="section-line"></div>
+</div>
 <div class="cards">
-
 <div class="card">
-
+<span class="card-icon">🏥</span>
 <h3>DCAS Smart CPG</h3>
-
-<p>
-
-Clinical Practice Guidelines Progressive Web App designed for EMS operational environments providing rapid protocol access.
-
-</p>
-
-<a href="https://solimananas.github.io/CPG-2025/" target="_blank">
-
-Open Project →
-
-</a>
-
+<p>Clinical Practice Guidelines Progressive Web App designed for EMS operational environments providing rapid protocol access.</p>
+<a class="card-link" href="https://solimananas.github.io/CPG-2025/" target="_blank">Open Project &rarr;</a>
 </div>
-
-
-
 <div class="card">
-
+<span class="card-icon">🕌</span>
 <h3>Zad Al-Muslim</h3>
-
-<p>
-
-Islamic digital assistant including Tasbeeh counter and useful Muslim productivity tools.
-
-</p>
-
-<a href="https://solimananas.github.io/Tasbee7/" target="_blank">
-
-Open Project →
-
-</a>
-
+<p>Islamic digital assistant including Tasbeeh counter and useful Muslim productivity tools.</p>
+<a class="card-link" href="https://solimananas.github.io/Tasbee7/" target="_blank">Open Project &rarr;</a>
 </div>
-
 </div>
-
 </section>
 
-
-
+<!-- EXPERIENCE -->
 <section id="experience" class="fade">
-
-<h2 class="section-title">Professional Experience</h2>
-
+<div class="section-head">
+<h2 class="section-title"><small>Career</small>Professional Experience</h2>
+<div class="section-line"></div>
+</div>
 <div class="timeline">
-
 <div class="timeline-item">
-
 <h4>Dubai Corporation for Ambulance Services</h4>
-
-<span>Emergency Medical Technician | 2020 – Present</span>
-
-<p>
-
-Developed Smart CPG digital platform enabling rapid access to EMS clinical guidelines and improving field usability for ambulance crews.
-
-</p>
-
+<span class="date">Emergency Medical Technician &middot; 2020 &ndash; Present</span>
+<p>Developed Smart CPG digital platform enabling rapid access to EMS clinical guidelines and improving field usability for ambulance crews.</p>
 </div>
-
-
-
 <div class="timeline-item">
-
-<h4>Saudi German Hospital – Cairo</h4>
-
-<span>Charge Nurse ICU | 2019 – 2020</span>
-
-<p>
-
-Managed critically ill ventilated and hemodynamically unstable patients and participated in rapid response and cardiac arrest teams.
-
-</p>
-
+<h4>Saudi German Hospital &ndash; Cairo</h4>
+<span class="date">Charge Nurse ICU &middot; 2019 &ndash; 2020</span>
+<p>Managed critically ill ventilated and hemodynamically unstable patients and participated in rapid response and cardiac arrest teams.</p>
 </div>
-
-
-
 <div class="timeline-item">
-
-<h4>El-Galaa Military Hospital – Cairo</h4>
-
-<span>ER / ICU Nurse & Instructor | 2015 – 2018</span>
-
-<p>
-
-Handled trauma, cardiac and emergency cases in high-acuity ER and ICU environments and participated in mass-casualty preparedness activities.
-
-</p>
-
+<h4>El-Galaa Military Hospital &ndash; Cairo</h4>
+<span class="date">ER / ICU Nurse &amp; Instructor &middot; 2015 &ndash; 2018</span>
+<p>Handled trauma, cardiac and emergency cases in high-acuity ER and ICU environments and participated in mass-casualty preparedness activities.</p>
 </div>
-
 </div>
-
 </section>
 
-
-
+<!-- SKILLS -->
 <section id="skills" class="fade">
-
-<h2 class="section-title">Skills</h2>
-
-<div class="skills">
-
-<div class="skill-box">
-
+<div class="section-head">
+<h2 class="section-title"><small>Expertise</small>Skills</h2>
+<div class="section-line"></div>
+</div>
+<div class="skills-grid">
+<div class="skill-card">
+<span class="skill-icon">💊</span>
 <h4>Medical Systems</h4>
-
 <p>Clinical systems support, guideline digitization, workflow optimization.</p>
-
 </div>
-
-
-
-<div class="skill-box">
-
+<div class="skill-card">
+<span class="skill-icon">⚙️</span>
 <h4>Web Development</h4>
-
 <p>HTML, CSS, JavaScript, Progressive Web Applications.</p>
-
 </div>
-
-
-
-<div class="skill-box">
-
+<div class="skill-card">
+<span class="skill-icon">🎨</span>
 <h4>Design</h4>
-
 <p>UI/UX design, Photoshop, operational interface design.</p>
-
 </div>
-
-
-
-<div class="skill-box">
-
+<div class="skill-card">
+<span class="skill-icon">🚑</span>
 <h4>Clinical</h4>
-
 <p>Trauma stabilization, airway management, EMS operations.</p>
-
 </div>
-
 </div>
-
 </section>
 
-
-
+<!-- CONTACT -->
 <section id="contact" class="fade">
-
-<h2 class="section-title">Contact</h2>
-
-<p>📍 Ajman, UAE</p>
-<p>📞 +971 55 178 8017</p>
-<p>✉ Ssoliman@dcas.gov.ae</p>
-
-<p>
-
-LinkedIn:
-
-<a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank">
-
-View Profile
-
-</a>
-
-</p>
-
-<p>
-
-GitHub:
-
-<a href="https://github.com/SolimanAnas" target="_blank">
-
-github.com/SolimanAnas
-
-</a>
-
-</p>
-
+<div class="section-head">
+<h2 class="section-title"><small>Reach</small>Contact</h2>
+<div class="section-line"></div>
+</div>
+<div class="contact-grid">
+<div class="contact-item">
+<span class="contact-icon">📍</span>
+<p>Ajman, UAE</p>
+</div>
+<div class="contact-item">
+<span class="contact-icon">📞</span>
+<p>+971 55 178 8017</p>
+</div>
+<div class="contact-item">
+<span class="contact-icon">✉️</span>
+<p>Ssoliman@dcas.gov.ae</p>
+</div>
+<div class="contact-item">
+<span class="contact-icon">🔗</span>
+<p><a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank">LinkedIn &rarr;</a></p>
+</div>
+<div class="contact-item">
+<span class="contact-icon">💻</span>
+<p><a href="https://github.com/SolimanAnas" target="_blank">github.com/SolimanAnas &rarr;</a></p>
+</div>
+</div>
 </section>
-
-
 
 <footer>
-
-© 2026 Soliman Anas Soliman
-
+<p>&copy; 2026 Soliman Anas Soliman</p>
 </footer>
 
-
 </div>
 
 </div>
-
-
 
 <script>
 
-/* DARK MODE */
-
 function toggleDark(){
-
-document.body.classList.toggle("dark")
-
+document.body.classList.toggle("dark");
+document.getElementById("themeBtn").textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 }
 
-/* SCROLL ANIMATION */
+function toggleMobile(){
+document.getElementById("nav").classList.toggle("open");
+document.getElementById("mobileBtn").classList.toggle("active");
+}
+
+document.querySelectorAll("nav a").forEach(a => {
+a.addEventListener("click", () => {
+document.getElementById("nav").classList.remove("open");
+document.getElementById("mobileBtn").classList.remove("active");
+});
+});
 
 const observer = new IntersectionObserver(entries => {
-
 entries.forEach(entry => {
+if(entry.isIntersecting) entry.target.classList.add("show");
+});
+},{threshold:0.12});
 
-if(entry.isIntersecting){
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
-entry.target.classList.add("show")
-
-}
-
-})
-
-})
-
-document.querySelectorAll(".fade").forEach(el => observer.observe(el))
+if(document.body.classList.contains("dark")) document.getElementById("themeBtn").textContent = "☀️";
 
 </script>
 
 </body>
-
 </html>
