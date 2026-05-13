@@ -72,8 +72,8 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 ### 📊 GitHub Analytics
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&icon_color=22c55e&title_color=22c55e&text_color=ffffff" alt="GitHub Stats" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" height="170" />
+  <img src="https://github-readme-stats.shion.dev/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&icon_color=22c55e&title_color=22c55e&text_color=ffffff" alt="GitHub Stats" height="170" />
+  <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" height="170" />
   <br/><br/>
   <img src="https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b&ring=22c55e&fire=22c55e&currStreakLabel=22c55e" alt="GitHub Streak" />
 </div>
