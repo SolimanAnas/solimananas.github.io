@@ -1,10 +1,12 @@
 <div align="center">
   <!-- Green typing-style title with blinking cursor -->
   <h1 style="font-family:'Courier New',monospace;color:#22c55e;font-size:28px;margin:0 0 8px 0;letter-spacing:2px;">
-    Soliman Anas Soliman<span style="animation:blink 1s step-end infinite;">_</span>
+    Soliman Anas Soliman
+    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2230%22%20viewBox%3D%220%200%2015%2030%22%3E%3Cstyle%3E%40keyframes%20blink%7B50%25%7Bopacity%3A0%7D%7D%20text%7Bfont-family%3Amonospace%3Bfont-size%3A28px%3Bfill%3A%2322c55e%3Banimation%3Ablink%201s%20step-end%20infinite%7D%3C%2Fstyle%3E%3Ctext%20x%3D%220%22%20y%3D%2225%22%3E_%3C%2Ftext%3E%3C%2Fsvg%3E"
+         alt="blinking cursor"
+         style="display:inline; vertical-align:bottom; height:28px;" />
   </h1>
-  <style>@keyframes blink{50%{opacity:0}}</style>
-  
+
   <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
   <br/><br/>
   
@@ -123,24 +125,13 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 ├── terminal.html
 ├── README.md
 └── CV/
-├── terminal.jpg
+    ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
-```
+    ```
+    
+  ###📬 CONNECT
 
-📬 CONNECT
-<div align="center" style="border:1px solid #22c55e33;border-radius:8px;padding:20px;background:#0a0a0a;">
-<a href="https://solimananas.github.io/"><img src="https://img.shields.io/badge/Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV"/></a>
-<a href="https://solimananas.github.io/terminal.html"><img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV"/></a>
-<a href="https://github.com/SolimanAnas"><img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-<a href="https://ae.linkedin.com/in/soliman-anas-05ba8b210"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf"><img src="https://img.shields.io/badge/Download_CV-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV"/></a>
-<a href="https://wa.me/+971551788017"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/></a>
-</div>
+<div align="center" style="border:1px solid #22c55e33;border-radius:8px;padding:20px;background:#0a0a0a;"> <a href="https://solimananas.github.io/"><img src="https://img.shields.io/badge/Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV"/></a> <a href="https://solimananas.github.io/terminal.html"><img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV"/></a> <a href="https://github.com/SolimanAnas"><img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a> <a href="https://ae.linkedin.com/in/soliman-anas-05ba8b210"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a> <a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf"><img src="https://img.shields.io/badge/Download_CV-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV"/></a> <a href="https://wa.me/+971551788017"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/></a> </div><div align="center"> <br/><br/> <p style="color:#ffffff;"><i>Building practical tools for real-world clinical environments.</i></p> <p style="color:#ffffff;">⭐ If you like my work, consider starring my repositories</p> </div> 
 
-<div align="center">
-<span style="color:#4ade80;font-family:'Courier New',monospace;font-size:11px;letter-spacing:3px;opacity:0.6;">— PATIENT DISCHARGED —</span>
-<br/><br/>
-<p style="color:#ffffff;"><i>Building practical tools for real-world clinical environments.</i></p>
-<p style="color:#ffffff;">⭐ If you like my work, consider starring my repositories</p>
-</div>  
+   
