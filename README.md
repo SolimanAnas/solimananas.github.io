@@ -1,123 +1,87 @@
 <div align="center">
-  <!-- Green typing-style title with blinking cursor -->
-  <h1 style="font-family:'Courier New',monospace;color:#22c55e;font-size:28px;margin:0 0 8px 0;letter-spacing:2px;">
-    Soliman Anas Soliman
-    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2215%22%20height%3D%2230%22%20viewBox%3D%220%200%2015%2030%22%3E%3Cstyle%3E%40keyframes%20blink%7B50%25%7Bopacity%3A0%7D%7D%20text%7Bfont-family%3Amonospace%3Bfont-size%3A28px%3Bfill%3A%2322c55e%3Banimation%3Ablink%201s%20step-end%20infinite%7D%3C%2Fstyle%3E%3Ctext%20x%3D%220%22%20y%3D%2225%22%3E_%3C%2Ftext%3E%3C%2Fsvg%3E"
-         alt="blinking cursor"
-         style="display:inline; vertical-align:bottom; height:28px;" />
-  </h1>
+  <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
+  <br/><br/>
 
   <img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
   <br/><br/>
-  
-  <span style="color:#4ade80;font-family:'Courier New',monospace;font-size:12px;letter-spacing:4px;opacity:0.7;">
-    BRIDGING MEDICINE & TECHNOLOGY
-  </span>
+
+  <h2>Professional CV & Portfolio</h2>
+  <p><b>RN | Paramedic | Medical Systems Support | Web Developer</b></p>
+  <p><i>Building practical tools for real-world clinical environments.</i></p>
 </div>
 
 ---
 
-### 🖥️ LIVE PREVIEW
+### 🖥️ Live Preview
 
 <div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <a href="https://solimananas.github.io/">
-          <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/live.png" width="420" style="border-radius:8px;max-width:100%" alt="Live CV Preview" />
-        </a>
-        <br/>
-        <a href="https://solimananas.github.io/">
-          <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="View Live CV" />
-        </a>
-      </td>
-      <td align="center" width="50%">
-        <a href="https://solimananas.github.io/terminal.html">
-          <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="420" style="border-radius:8px;max-width:100%" alt="Terminal CV Preview" />
-        </a>
-        <br/>
-        <a href="https://solimananas.github.io/terminal.html">
-          <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
+  <a href="https://solimananas.github.io/terminal.html">
+    <img src="https://raw.githubusercontent.com/SolimanAnas/solimananas.github.io/main/CV/terminal.jpg" width="850" style="border-radius:10px;" alt="Terminal CV Preview" />
+  </a>
+  <br/><br/>
 
----
-
-### 👨‍⚕️ ABOUT ME
-
-**RN | Paramedic | Medical Systems Support | Web Developer**
-
-Medical professional with 10+ years in emergency and prehospital care. I build practical tools for real-world clinical environments — lightweight, offline-first, and designed for the field.
-
-**What I do:**  
-⚕️ Clinical workflow optimization & guideline digitization  
-📡 EMS-friendly digital tools and PWA applications  
-🔄 Translating complex protocols into usable systems
-
----
-
-### 🛠️ TECH STACK
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,python,nodejs,git,github" alt="Tech Stack" />
-</div>
-
----
-
-### 💻 FEATURED PROJECTS
-
-<div align="center">
-  <table>
-    <tr>
-      <td width="50%" style="border:1px solid #22c55e33;border-radius:8px;padding:16px;background:#0a0a0a;color:#ffffff;">
-        <strong style="color:#ffffff;">🚑 DCAS Smart CPG</strong><br/>
-        <span style="color:#ffffff;font-size:13px;">Clinical Practice Guidelines PWA for EMS rapid protocol access</span><br/><br/>
-        <a href="https://solimananas.github.io/CPG-2025/"><img src="https://img.shields.io/badge/Live_App-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live App"></a> &nbsp; 
-        <a href="https://github.com/SolimanAnas/CPG-2025"><img src="https://img.shields.io/badge/Source-0b0b0b?style=for-the-badge&logo=github&logoColor=22c55e" alt="Source"></a>
-      </td>
-      <td width="50%" style="border:1px solid #22c55e33;border-radius:8px;padding:16px;background:#0a0a0a;color:#ffffff;">
-        <strong style="color:#ffffff;">📿 Zad Al-Muslim</strong><br/>
-        <span style="color:#ffffff;font-size:13px;">Islamic digital assistant with Tasbeeh counter & productivity tools</span><br/><br/>
-        <a href="https://solimananas.github.io/Tasbee7/"><img src="https://img.shields.io/badge/Live_App-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live App"></a> &nbsp; 
-        <a href="https://github.com/SolimanAnas/Tasbee7"><img src="https://img.shields.io/badge/Source-0b0b0b?style=for-the-badge&logo=github&logoColor=22c55e" alt="Source"></a>
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
-### 🧠 WHAT I BUILD
-
-<div align="center">
-  <table style="border-collapse:separate;border-spacing:8px;">
-    <tr>
-      <td align="center" style="padding:12px 24px;border:1px solid #22c55e33;border-radius:8px;background:#0a0a0a;color:#ffffff;">⚕️ Clinical tools usable under pressure</td>
-      <td align="center" style="padding:12px 24px;border:1px solid #22c55e33;border-radius:8px;background:#0a0a0a;color:#ffffff;">📡 Offline-capable web apps (PWA)</td>
-    </tr>
-    <tr>
-      <td align="center" style="padding:12px 24px;border:1px solid #22c55e33;border-radius:8px;background:#0a0a0a;color:#ffffff;">⚡ Fast, minimal, no-dependency systems</td>
-      <td align="center" style="padding:12px 24px;border:1px solid #22c55e33;border-radius:8px;background:#0a0a0a;color:#ffffff;">🚑 Real-world EMS solutions</td>
-    </tr>
-  </table>
-</div>
-
----
-
-### 📊 GITHUB ANALYTICS
-
-<div align="center">
-  <a href="https://yourinsights.vercel.app">
-    <img src="https://yourinsights.vercel.app/api/insight?username=SolimanAnas&theme=synthwave&graph=true&languages=false&streak=true&stats=false&header=true&summary=true&profile=true" alt="GitHub Insights" />
+  <a href="https://solimananas.github.io/">
+    <img src="https://img.shields.io/badge/View_Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="View Live CV" />
+  </a>
+  <a href="https://solimananas.github.io/terminal.html">
+    <img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV" />
   </a>
 </div>
 
 ---
 
-### 📁 REPOSITORY STRUCTURE
+### 🚀 About Me
+
+I am a Registered Nurse (RN) and Paramedic with 10+ years in emergency and prehospital care.
+
+💡 **I specialize in:**
+- Clinical workflow optimization
+- EMS-friendly digital tools
+- Lightweight offline-first applications
+- Translating protocols into usable systems
+
+----
+
+### 🛠️ Tech Stack
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,python,nodejs,git,github" alt="Tech Stack Icons" />
+</div>
+
+---
+
+### 💻 Featured Projects
+
+🚑 **DCAS Smart CPG**
+- 🔗 [Live App](https://solimananas.github.io/CPG-2025/)
+- 📂 [Source Code](https://github.com/SolimanAnas/CPG-2025)
+
+📿 **Zad Al-Muslim**
+- 🔗 [Live App](https://solimananas.github.io/Tasbee7/)
+- 📂 [Source Code](https://github.com/SolimanAnas/Tasbee7)
+
+---
+
+### 📊 GitHub Analytics
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=SolimanAnas&theme=tokyonight&hide_border=true&background=0b0b0b)](https://github.com/SolimanAnas)
+
+</div>
+
+---
+
+### 🧠 What I Build
+
+- ✔️ Clinical tools usable under pressure
+- ✔️ Offline-capable web apps (PWA)
+- ✔️ Fast, minimal, no-dependency systems
+- ✔️ Real-world EMS solutions
+
+---
+
+### 📂 Repository Structure
 
 ```text
 /
@@ -128,10 +92,28 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
     ├── terminal.jpg
     ├── photo.png
     └── Soliman_Anas_Medical_Systems_Support_CV.pdf
-    ```
-    
-  ###📬 CONNECT
 
-<div align="center" style="border:1px solid #22c55e33;border-radius:8px;padding:20px;background:#0a0a0a;"> <a href="https://solimananas.github.io/"><img src="https://img.shields.io/badge/Live_CV-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live CV"/></a> <a href="https://solimananas.github.io/terminal.html"><img src="https://img.shields.io/badge/Terminal_CV-0b0b0b?style=for-the-badge&logo=gnubash&logoColor=22c55e" alt="Terminal CV"/></a> <a href="https://github.com/SolimanAnas"><img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a> <a href="https://ae.linkedin.com/in/soliman-anas-05ba8b210"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a> <a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf"><img src="https://img.shields.io/badge/Download_CV-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Download CV"/></a> <a href="https://wa.me/+971551788017"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/></a> </div><div align="center"> <br/><br/> <p style="color:#ffffff;"><i>Building practical tools for real-world clinical environments.</i></p> <p style="color:#ffffff;">⭐ If you like my work, consider starring my repositories</p> </div> 
+```
 
-   
+📫 Connect With Me
+<div align="center">
+<a href="https://github.com/SolimanAnas">
+<img src="https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+<a href="https://ae.linkedin.com/in/soliman-anas-05ba8b210">
+<img src="https://img.shields.io/badge/LinkedIn-Soliman%20Anas-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="mailto:solimananas2012@gmail.com">
+<img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+<a href="https://solimananas.github.io/CV/Soliman_Anas_Medical_Systems_Support_CV.pdf">
+<img src="https://img.shields.io/badge/Download_CV-PDF-22c55e?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" />
+</a>
+<a href="https://wa.me/+971551788017">
+<img src="https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+</a>
+</div>
+<div align="center">
+<p>⭐ If you like my work, consider starring my repositories</p>
+<p>🚀 Always building real-world solutions</p>
+</div>
