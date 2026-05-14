@@ -64,7 +64,7 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 | 🚑 **DCAS Smart CPG** | Clinical Practice Guidelines PWA for EMS rapid protocol access | [Live App](https://solimananas.github.io/CPG-2025/) · [Source](https://github.com/SolimanAnas/CPG-2025) |
 | 📿 **Zad Al-Muslim** | Islamic digital assistant with Tasbeeh counter & productivity tools | [Live App](https://solimananas.github.io/Tasbee7/) · [Source](https://github.com/SolimanAnas/Tasbee7) |
 
----
+----
 
 ### 🧠 What I Build
 
@@ -79,19 +79,19 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
   </tr>
 </table>
 
----
+----
 
 ### 📊 GitHub Analytics
 
 <div align="center">
   <img src="https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=tokyonight&hide_border=true&bg_color=0b0b0b&title_color=22c55e&text_color=ffffff" alt="Top Languages" height="170" />
   <br/><br/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=SolimanAnas&theme=react-dark&hide_border=true&bg_color=0b0b0b&color=22c55e&line=22c55e&point=ffffff&area=true" alt="GitHub Activity Graph" width="100%" />
-  <br/>
-  <sub>📊 Live streak data available on <a href="https://solimananas.github.io/#github">solimananas.github.io</a></sub>
+  <img src="https://github-readme-stats.shion.dev/api?username=SolimanAnas&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0b0b0b&icon_color=22c55e&title_color=22c55e&text_color=ffffff" alt="GitHub Stats" height="170" />
+  <br/><br/>
+  [![GitHub Insights](https://yourinsights.vercel.app/api/insight?username=SolimanAnas&theme=Synthwave&graph=true&languages=false&streak=true&stats=false&header=true&summary=true&profile=true)](https://yourinsights.vercel.app)
 </div>
 
----
+-----
 
 ### 📁 Repository Structure
 
