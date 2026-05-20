@@ -1,4 +1,5 @@
 <div align="center">
+
   <img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3000&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
   <br/><br/>
 
