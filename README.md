@@ -1,26 +1,8 @@
 <div align="center">
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 160" width="100%" style="max-width:800px;height:auto;display:block;margin:0 auto;">
-  <rect width="800" height="160" fill="#0a0a0a" rx="12"/>
-  <rect x="1" y="1" width="798" height="158" rx="11" fill="none" stroke="#22c55e" stroke-opacity="0.08" stroke-width="1"/>
-
-  <text x="400" y="55" text-anchor="middle" font-family="'Courier New',monospace" font-size="28" font-weight="bold" fill="#22c55e" letter-spacing="4">SOLIMAN ANAS SOLIMAN</text>
-
-  <line x1="280" y1="63" x2="520" y2="63" stroke="#22c55e" stroke-width="1" opacity="0.25"/>
-
-  <text x="400" y="83" text-anchor="middle" font-family="'Courier New',monospace" font-size="13" fill="#4ade80" letter-spacing="8" opacity="0.85">CLINICAL SYSTEMS BUILDER</text>
-
-  <text x="400" y="105" text-anchor="middle" font-family="'Courier New',monospace" font-size="10" fill="#94a3b8" letter-spacing="5">RN  |  PARAMEDIC  |  WEB DEVELOPER</text>
-
-  <path d="M0,155 L55,155 L90,155 L100,141 L108,155 L112,155 L116,148 L120,70 L127,165 L132,155 L140,155 L150,139 L165,155 L180,155 L235,155 L255,155 L265,141 L273,155 L277,155 L281,148 L285,70 L292,165 L297,155 L305,155 L315,139 L330,155 L345,155 L400,155 L420,155 L430,141 L438,155 L442,155 L446,148 L450,70 L457,165 L462,155 L470,155 L480,139 L495,155 L510,155 L565,155 L585,155 L595,141 L603,155 L607,155 L611,148 L615,70 L622,165 L627,155 L635,155 L645,139 L660,155 L675,155 L735,155 L800,155" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
-  <circle cx="800" cy="155" r="2.5" fill="#22c55e" opacity="0.7"/>
-</svg>
-
-<br/>
-<img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
-
+<img src="https://readme-typing-svg.herokuapp.com?size=28&duration=3200&color=22C55E&center=true&vCenter=true&width=800&lines=Soliman+Anas+Soliman;RN+%7C+Paramedic+%7C+Web+Developer;Clinical+Systems+Builder;Bridging+Medicine+%26+Technology" alt="Typing Header" />
 <br/><br/>
-<span style="color:#4ade80;font-family:'Courier New',monospace;font-size:12px;letter-spacing:4;opacity:0.7;">BRIDGING MEDICINE &amp; TECHNOLOGY</span>
+<img src="https://komarev.com/ghpvc/?username=SolimanAnas&label=Profile+Views&color=22c55e&style=for-the-badge" alt="Profile Views" />
 
 </div>
 
