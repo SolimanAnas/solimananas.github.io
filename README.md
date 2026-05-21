@@ -227,8 +227,7 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
 </svg>
 
 <div align="center">
-  <span style="color:#4ade80;font-family:'Courier New',monospace;font-size:11px;letter-spacing:3;opacity:0.6;">— PATIENT DISCHARGED —</span>
-  <br/><br/>
+  <br/>
   <p><i>Building practical tools for real-world clinical environments.</i></p>
   <p>⭐ If you like my work, consider starring my repositories</p>
 </div>
