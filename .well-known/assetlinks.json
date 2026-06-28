@@ -8,5 +8,15 @@
         "42:04:3F:7F:52:0F:CE:65:7B:03:17:E4:50:0E:0E:2D:81:9B:16:5F:74:62:32:43:20:D3:BF:8B:00:69:E7:74"
       ]
     }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.solimananas.smartcare",
+      "sha256_cert_fingerprints": [
+        "42:04:3F:7F:52:0F:CE:65:7B:03:17:E4:50:0E:0E:2D:81:9B:16:5F:74:62:32:43:20:D3:BF:8B:00:69:E7:74"
+      ]
+    }
   }
 ]
