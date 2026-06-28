@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "io.github.solimananas.smartcare",
+      "package_name": "io.github.solimananas.twa",
       "sha256_cert_fingerprints": [
-        "42:04:3F:7F:52:0F:CE:65:7B:03:17:E4:50:0E:0E:2D:81:9B:16:5F:74:62:32:43:20:D3:BF:8B:00:69:E7:74"
+        "81:AE:22:DF:2B:59:D1:85:F7:B2:11:00:4D:5E:B4:6B:D3:24:8A:D7:C9:A6:B8:D3:78:B2:42:1B:88:68:D3:8D"
       ]
     }
   },
