@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soliman Anas ~ Terminal Portfolio</title>
+<meta name="description" content="Terminal-style portfolio of Soliman Anas Soliman — RN, EMT and web developer.">
+<meta name="theme-color" content="#0b0b0b">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 <style>
 
@@ -84,6 +86,10 @@ letter-spacing:.02em;
 
 /* NAV BAR */
 .navbar{
+position:sticky;
+top:10px;
+z-index:50;
+box-shadow:0 8px 24px rgba(0,0,0,.6);
 display:flex;
 flex-wrap:wrap;
 gap:4px;
@@ -108,7 +114,11 @@ position:relative;
 
 .navbar a:hover::before,.navbar a:focus::before{opacity:1}
 
-.navbar a:hover,.navbar a:focus{color:#22c55e;background:rgba(34,197,94,.06)}
+.navbar a:hover,.navbar a:focus,.navbar a.active{color:#22c55e;background:rgba(34,197,94,.06)}
+
+.navbar a.active::before{opacity:1}
+
+.navbar .nav-alt{margin-left:auto;color:#4b5563}
 
 /* SECTIONS */
 .section{
@@ -117,7 +127,7 @@ border-radius:8px;
 padding:24px;
 margin-bottom:24px;
 background:#000;
-scroll-margin-top:24px;
+scroll-margin-top:72px;
 transition:border-color .4s,box-shadow .4s;
 }
 
@@ -269,6 +279,20 @@ margin-bottom:4px;
 
 .project .action-btn{font-size:12px;padding:5px 12px;display:inline-block}
 
+.project-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 12px;margin-bottom:4px}
+
+.project-head .project-title{margin-bottom:0}
+
+.project-tags{display:flex;flex-wrap:wrap;gap:6px}
+
+.project-tags span{font-size:11px;color:#6b7280;border:1px solid #1f2937;border-radius:3px;padding:1px 7px}
+
+.project-actions{display:flex;flex-wrap:wrap;gap:8px}
+
+.action-btn.solid{background:#22c55e;color:#0b0b0b;font-weight:700}
+
+.action-btn.solid:hover{background:#4ade80;color:#0b0b0b}
+
 /* SKILLS */
 .skills{
 display:grid;
@@ -360,6 +384,12 @@ transition:opacity .2s;
 
 .contact-item a:hover{opacity:.7;text-decoration:underline}
 
+.contact-item > span:last-child,.contact-item > a{min-width:0;overflow-wrap:anywhere}
+
+.copy-btn{margin-left:auto;font-size:11px;padding:2px 8px;flex-shrink:0}
+
+@media(min-width:769px){.contact-wide{grid-column:span 2}}
+
 /* FOOTER */
 footer{
 text-align:center;
@@ -398,6 +428,23 @@ transform:translateY(0);
 ::-webkit-scrollbar-thumb{background:#1f2937;border-radius:3px}
 ::-webkit-scrollbar-thumb:hover{background:#22c55e}
 
+/* FOCUS */
+:focus-visible{outline:1px dashed #22c55e;outline-offset:3px}
+
+/* BACK TO TOP */
+.to-top{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:60;
+background:#050505;
+opacity:0;
+visibility:hidden;
+transition:opacity .3s,visibility .3s,background .25s;
+}
+
+.to-top.show{opacity:1;visibility:visible}
+
 /* SELECTION */
 ::selection{background:rgba(34,197,94,.25);color:#fff}
 
@@ -412,6 +459,8 @@ transform:translateY(0);
 .navbar{gap:2px;padding:8px 10px}
 .navbar a{font-size:12px;padding:4px 8px}
 .navbar a::before{display:none}
+.navbar{top:6px}
+.navbar .nav-alt{margin-left:0}
 .section{padding:18px;margin-bottom:16px}
 .hero-container{flex-direction:column-reverse;text-align:center;gap:16px}
 .hero-image{width:130px;margin:0 auto}
@@ -467,6 +516,7 @@ transform:translateY(0);
 <a href="#projects">projects</a>
 <a href="#skills">skills</a>
 <a href="#contact">contact</a>
+<a href="index.html" class="nav-alt">gui &rarr;</a>
 </nav>
 
 <!-- HOME -->
@@ -488,7 +538,7 @@ transform:translateY(0);
 
 <div class="action-buttons">
 <a href="#projects" class="action-btn">$ cd projects</a>
-<a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" class="action-btn">$ cat cv.pdf</a>
+<a href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" rel="noopener" class="action-btn">$ cat cv.pdf</a>
 <a href="#contact" class="action-btn">$ ./connect</a>
 </div>
 </div>
@@ -510,22 +560,37 @@ transform:translateY(0);
 <div class="ascii-divider">total 3</div>
 
 <div class="project">
+<div class="project-head">
 <div class="project-title">dcas-smart-cpg</div>
+<div class="project-tags"><span>pwa</span><span>ems</span></div>
+</div>
 <p>Clinical Practice Guidelines Progressive Web App designed for EMS crews to access treatment protocols quickly during emergency response.</p>
-<a class="action-btn" href="https://cpg.qzz.io/" target="_blank">$ open project</a>
+<div class="project-actions">
+<a class="action-btn" href="https://cpg.qzz.io/" target="_blank" rel="noopener">$ open project</a>
+</div>
 </div>
 
 <div class="project">
+<div class="project-head">
 <div class="project-title">zad-al-muslim</div>
-<p>Islamic digital assistant including Tasbeeh counter and useful Muslim tools. Available on Google Play.</p>
-<a class="action-btn" href="https://play.google.com/store/apps/details?id=io.github.solimananas.twa" target="_blank">$ open google-play</a>
-<a class="action-btn" href="https://solimananas.github.io/Tasbee7/" target="_blank">$ open web-app</a>
+<div class="project-tags"><span>android</span><span>pwa</span></div>
+</div>
+<p>Islamic digital assistant including Tasbeeh counter and useful Muslim tools.</p>
+<div class="project-actions">
+<a class="action-btn solid" href="https://play.google.com/store/apps/details?id=io.github.solimananas.twa" target="_blank" rel="noopener">▶ google play</a>
+<a class="action-btn" href="https://solimananas.github.io/Tasbee7/" target="_blank" rel="noopener">$ open web-app</a>
+</div>
 </div>
 
 <div class="project">
+<div class="project-head">
 <div class="project-title">smartcare</div>
-<p>Offline-first clinical learning platform for healthcare professionals: study modules, flashcards, quizzes, ECG simulator and drug calculator. Available on Google Play.</p>
-<a class="action-btn" href="https://play.google.com/store/apps/details?id=io.github.solimananas.smartcare" target="_blank">$ open google-play</a>
+<div class="project-tags"><span>android</span><span>offline-first</span></div>
+</div>
+<p>Clinical learning platform for healthcare professionals: study modules, flashcards, quizzes, ECG simulator and drug calculator.</p>
+<div class="project-actions">
+<a class="action-btn solid" href="https://play.google.com/store/apps/details?id=io.github.solimananas.smartcare" target="_blank" rel="noopener">▶ google play</a>
+</div>
 </div>
 </div>
 
@@ -545,7 +610,7 @@ transform:translateY(0);
 </ul>
 <div class="skill-bar">
 <span style="color:#6b7280;font-size:11px;">proficiency</span>
-<div class="skill-bar-track"><div class="skill-bar-fill" style="width:85%"></div></div>
+<div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
 </div>
 </div>
 
@@ -559,7 +624,7 @@ transform:translateY(0);
 </ul>
 <div class="skill-bar">
 <span style="color:#6b7280;font-size:11px;">proficiency</span>
-<div class="skill-bar-track"><div class="skill-bar-fill" style="width:70%"></div></div>
+<div class="skill-bar-track"><div class="skill-bar-fill" data-width="70%"></div></div>
 </div>
 </div>
 
@@ -572,7 +637,7 @@ transform:translateY(0);
 </ul>
 <div class="skill-bar">
 <span style="color:#6b7280;font-size:11px;">proficiency</span>
-<div class="skill-bar-track"><div class="skill-bar-fill" style="width:90%"></div></div>
+<div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
 </div>
 </div>
 
@@ -584,10 +649,11 @@ transform:translateY(0);
 <div class="prompt">$ cat .contact</div>
 <div class="contact-grid">
 <div class="contact-item"><span>📍</span> <span>Ajman, UAE</span></div>
-<div class="contact-item"><span>📞</span> <span>+971 55 178 8017</span></div>
-<div class="contact-item"><span>✉</span> <span>Ssoliman@dcas.gov.ae</span></div>
-<div class="contact-item"><span>🔗</span> <a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank">LinkedIn</a></div>
-<div class="contact-item"><span>💻</span> <a href="https://github.com/SolimanAnas" target="_blank">GitHub</a></div>
+<div class="contact-item"><span>📞</span> <a href="tel:+971551788017">+971 55 178 8017</a></div>
+<div class="contact-item contact-wide"><span>✉</span> <a href="mailto:Solimananas2012@gmail.com">Solimananas2012@gmail.com</a> <button class="action-btn copy-btn" type="button" data-copy="Solimananas2012@gmail.com">copy</button></div>
+<div class="contact-item"><span>🔗</span> <a href="https://www.linkedin.com/in/soliman-anas-05ba8b210/" target="_blank" rel="noopener">LinkedIn</a></div>
+<div class="contact-item"><span>💻</span> <a href="https://github.com/SolimanAnas" target="_blank" rel="noopener">GitHub</a></div>
+<div class="contact-item"><span>💬</span> <a href="https://wa.me/971551788017" target="_blank" rel="noopener">WhatsApp</a></div>
 </div>
 </div>
 
@@ -600,15 +666,47 @@ transform:translateY(0);
 
 </div>
 
+<button class="action-btn to-top" id="toTop" type="button" aria-label="Back to top">$ cd ~</button>
+
 <script>
 
 const observer = new IntersectionObserver((entries) => {
 entries.forEach(entry => {
-if(entry.isIntersecting) entry.target.classList.add("show");
+if(!entry.isIntersecting) return;
+entry.target.classList.add("show");
+entry.target.querySelectorAll(".skill-bar-fill[data-width]").forEach(bar => bar.style.width = bar.dataset.width);
 });
 },{threshold:0.08});
 
 document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
+
+// Highlight the nav entry for the section in view
+const navLinks = [...document.querySelectorAll('.navbar a[href^="#"]')];
+const navObserver = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(!entry.isIntersecting) return;
+navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id));
+});
+},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll(".section[id]").forEach(sec => navObserver.observe(sec));
+
+// Back to top
+const toTop = document.getElementById("toTop");
+window.addEventListener("scroll", () => toTop.classList.toggle("show", window.scrollY > 600), {passive:true});
+toTop.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+
+// Copy email
+document.querySelectorAll(".copy-btn").forEach(btn => {
+btn.addEventListener("click", async () => {
+try{
+await navigator.clipboard.writeText(btn.dataset.copy);
+btn.textContent = "copied ✓";
+}catch(e){
+btn.textContent = "ctrl+c";
+}
+setTimeout(() => btn.textContent = "copy", 1800);
+});
+});
 
 </script>
 
