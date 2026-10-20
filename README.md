@@ -106,7 +106,14 @@ Medical professional with 10+ years in emergency and prehospital care. I build p
       <td width="50%" style="border:1px solid #22c55e33;border-radius:8px;padding:16px;background:#0a0a0a;">
         <strong>📿 Zad Al-Muslim</strong><br/>
         <span style="color:#a3aab8;font-size:13px;">Islamic digital assistant with Tasbeeh counter &amp; productivity tools</span><br/><br/>
-        <a href="https://solimananas.github.io/Tasbee7/"><img src="https://img.shields.io/badge/Live_App-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live App"></a>&nbsp;<a href="https://github.com/SolimanAnas/Tasbee7"><img src="https://img.shields.io/badge/Source-0b0b0b?style=for-the-badge&logo=github&logoColor=22c55e" alt="Source"></a>
+        <a href="https://play.google.com/store/apps/details?id=io.github.solimananas.twa"><img src="https://img.shields.io/badge/Google_Play-0b0b0b?style=for-the-badge&logo=googleplay&logoColor=22c55e" alt="Google Play"></a>&nbsp;<a href="https://solimananas.github.io/Tasbee7/"><img src="https://img.shields.io/badge/Live_App-0b0b0b?style=for-the-badge&logo=googlechrome&logoColor=22c55e" alt="Live App"></a>&nbsp;<a href="https://github.com/SolimanAnas/Tasbee7"><img src="https://img.shields.io/badge/Source-0b0b0b?style=for-the-badge&logo=github&logoColor=22c55e" alt="Source"></a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="border:1px solid #22c55e33;border-radius:8px;padding:16px;background:#0a0a0a;">
+        <strong>📚 SmartCare</strong><br/>
+        <span style="color:#a3aab8;font-size:13px;">Offline-first clinical learning platform: study modules, flashcards, quizzes, ECG simulator &amp; drug calculator</span><br/><br/>
+        <a href="https://play.google.com/store/apps/details?id=io.github.solimananas.smartcare"><img src="https://img.shields.io/badge/Google_Play-0b0b0b?style=for-the-badge&logo=googleplay&logoColor=22c55e" alt="Google Play"></a>&nbsp;<a href="https://github.com/SolimanAnas/SmartCare"><img src="https://img.shields.io/badge/Source-0b0b0b?style=for-the-badge&logo=github&logoColor=22c55e" alt="Source"></a>
       </td>
     </tr>
   </table>
