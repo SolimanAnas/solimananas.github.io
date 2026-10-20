@@ -4,6 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Soliman Anas Soliman | RN &middot; EMT &middot; Web Developer</title>
+<meta name="description" content="Soliman Anas Soliman — RN, EMT and web developer building clinical tools and mobile apps (Zad Al-Muslim, SmartCare) on Google Play.">
+<meta name="theme-color" content="#1e3a8a">
+<script>
+(function(){
+var t=null;
+try{t=localStorage.getItem("theme")}catch(e){}
+if(t==="dark"||(!t&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)){document.documentElement.classList.add("dark")}
+})();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 <style>
 
@@ -18,6 +27,7 @@
 --border:#e2e8f0;
 --shadow:rgba(30,58,138,0.08);
 --toggle-bg:#e2e8f0;
+--header-bg:rgba(255,255,255,0.72);
 --bg-image:url("https://raw.githubusercontent.com/SolimanAnas/Tasbee7/main/images/Background-light.png");
 }
 
@@ -32,6 +42,7 @@
 --border:#334155;
 --shadow:rgba(0,0,0,0.2);
 --toggle-bg:#334155;
+--header-bg:rgba(15,23,42,0.72);
 --bg-image:url("https://raw.githubusercontent.com/SolimanAnas/Tasbee7/main/images/Background-dark.png");
 }
 
@@ -84,14 +95,24 @@ h4{font-size:1.05rem}
 
 /* HEADER */
 header{
+position:sticky;
+top:0;
+z-index:100;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 0 18px;
+padding:14px 0;
 border-bottom:1px solid var(--border);
 margin-bottom:56px;
-transition:border-color .4s ease;
+background:var(--header-bg);
+backdrop-filter:blur(14px);
+-webkit-backdrop-filter:blur(14px);
+transition:border-color .4s ease,background .4s ease,box-shadow .3s ease;
 }
+
+header.scrolled{box-shadow:0 8px 24px var(--shadow)}
+
+.logo a{color:inherit;text-decoration:none}
 
 .logo{
 font-family:'DM Serif Display',serif;
@@ -116,7 +137,7 @@ border-radius:8px;
 transition:color .3s,background .3s;
 }
 
-nav a:hover{color:var(--accent);background:var(--accent-soft)}
+nav a:hover,nav a.active{color:var(--accent);background:var(--accent-soft)}
 
 .toggle-group{display:flex;align-items:center;gap:6px}
 
@@ -207,6 +228,36 @@ margin-bottom:18px;
 transition:background .4s ease;
 }
 
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+
+.hero-stats{
+display:flex;
+flex-wrap:wrap;
+gap:12px;
+}
+
+.hero-stat{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:12px;
+padding:10px 16px;
+backdrop-filter:blur(10px);
+min-width:120px;
+transition:background .4s ease,border-color .4s ease;
+}
+
+.hero-stat strong{
+display:block;
+font-family:'DM Serif Display',serif;
+font-weight:400;
+font-size:1.5rem;
+line-height:1.1;
+color:var(--accent);
+transition:color .4s ease;
+}
+
+.hero-stat span{font-size:.75rem;color:var(--text-light);transition:color .4s ease}
+
 /* BUTTONS */
 .btn{
 display:inline-flex;
@@ -242,8 +293,23 @@ transition:transform .3s;
 
 .btn:hover svg{transform:translateX(3px)}
 
+.btn-ghost{
+background:transparent;
+color:var(--accent);
+border:1px solid var(--accent);
+box-shadow:none;
+}
+
+.dark .btn-ghost{color:var(--accent-light);border-color:var(--accent-light)}
+
+.btn-ghost:hover{
+background:var(--accent-soft);
+color:var(--primary);
+box-shadow:none;
+}
+
 /* SECTIONS */
-section{margin-bottom:60px}
+section{margin-bottom:60px;scroll-margin-top:96px}
 
 .section-head{
 display:flex;
@@ -309,6 +375,8 @@ gap:24px;
 }
 
 .card{
+display:flex;
+flex-direction:column;
 background:var(--card);
 border:1px solid var(--border);
 border-radius:14px;
@@ -328,6 +396,46 @@ box-shadow:0 12px 32px var(--shadow);
 
 .card p{font-size:.9rem;color:var(--text-light);margin-bottom:16px;transition:color .4s ease}
 
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+
+.tag{
+font-size:.7rem;
+font-weight:600;
+letter-spacing:.04em;
+text-transform:uppercase;
+color:var(--accent);
+background:var(--accent-soft);
+padding:3px 10px;
+border-radius:999px;
+transition:color .4s ease,background .4s ease;
+}
+
+.card-actions{
+margin-top:auto;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:10px 18px;
+}
+
+.play-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+background:var(--accent);
+color:#fff;
+font-size:.8rem;
+font-weight:600;
+padding:8px 14px;
+border-radius:10px;
+text-decoration:none;
+transition:background .3s,transform .3s;
+}
+
+.play-btn:hover{background:var(--primary);transform:translateY(-2px)}
+
+.play-btn svg{width:14px;height:14px;fill:currentColor}
+
 .card-link{
 display:inline-flex;
 align-items:center;
@@ -340,7 +448,6 @@ transition:gap .3s,color .3s;
 }
 
 .card-link:hover{gap:10px;color:var(--primary)}
-.card-link+.card-link{margin-left:16px}
 
 /* TIMELINE */
 .timeline{
@@ -641,6 +748,25 @@ transition:color .3s;
 
 .contact-item a:hover{color:var(--primary)}
 
+.contact-item p{min-width:0;overflow-wrap:anywhere}
+
+@media(min-width:769px){.contact-wide{grid-column:span 2}}
+
+.copy-btn{
+margin-left:auto;
+flex-shrink:0;
+background:var(--accent-soft);
+color:var(--accent);
+border:none;
+font:600 .75rem 'DM Sans',sans-serif;
+padding:5px 10px;
+border-radius:8px;
+cursor:pointer;
+transition:background .3s,color .3s;
+}
+
+.copy-btn:hover{background:var(--accent);color:#fff}
+
 /* FOOTER */
 footer{
 text-align:center;
@@ -656,6 +782,54 @@ color:var(--text-light);
 opacity:.7;
 transition:color .4s ease;
 }
+
+footer a{color:var(--accent);text-decoration:none;font-weight:500}
+
+footer a:hover{color:var(--primary)}
+
+/* BACK TO TOP */
+.to-top{
+position:fixed;
+right:20px;
+bottom:20px;
+width:44px;
+height:44px;
+border-radius:12px;
+border:1px solid var(--border);
+background:var(--header-bg);
+backdrop-filter:blur(10px);
+-webkit-backdrop-filter:blur(10px);
+color:var(--accent);
+font-size:1.1rem;
+cursor:pointer;
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+transition:opacity .3s,transform .3s,visibility .3s,background .4s ease;
+z-index:90;
+}
+
+.to-top.show{opacity:1;visibility:visible;transform:none}
+
+.to-top:hover{background:var(--accent);color:#fff}
+
+/* ACCESSIBILITY */
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+.skip-link{
+position:absolute;
+left:16px;
+top:-60px;
+background:var(--accent);
+color:#fff;
+padding:8px 14px;
+border-radius:8px;
+z-index:200;
+text-decoration:none;
+font-weight:600;
+}
+
+.skip-link:focus{top:12px}
 
 /* SCROLL ANIMATIONS */
 .fade{
@@ -673,7 +847,7 @@ transform:translateY(0);
 @media(max-width:768px){
 header{margin-bottom:40px;padding:16px 0}
 .container{padding:0 16px}
-nav{display:none;position:fixed;top:66px;left:0;right:0;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border);flex-direction:column;padding:12px;gap:4px;transition:background .4s ease,border-color .4s ease;z-index:100}
+nav{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;border-radius:12px;box-shadow:0 12px 32px var(--shadow);border:1px solid var(--border);background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);flex-direction:column;padding:12px;gap:4px;transition:background .4s ease,border-color .4s ease;z-index:100}
 .dark nav{background:rgba(15,23,42,0.9)}
 nav.open{display:flex}
 nav a{width:100%;padding:10px 14px}
@@ -682,7 +856,12 @@ nav a{width:100%;padding:10px 14px}
 .hero-desc{margin-left:auto;margin-right:auto}
 .hero-divider{margin-left:auto;margin-right:auto}
 .profile-img{margin:0 auto;max-width:220px}
+.hero-actions,.hero-stats{justify-content:center}
+.hero-stats{flex-wrap:nowrap;gap:8px}
+.hero-stat{flex:1 1 0;min-width:0;padding:10px 8px}
+section{scroll-margin-top:84px}
 section{margin-bottom:44px}
+.to-top{right:14px;bottom:14px}
 .summary-card{padding:24px}
 }
 
@@ -709,12 +888,14 @@ section{margin-bottom:44px}
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <div class="overlay">
 
 <div class="container">
 
-<header>
-<div class="logo">Soliman<span>.</span>Anas</div>
+<header id="top">
+<div class="logo"><a href="#top" aria-label="Back to top">Soliman<span>.</span>Anas</a></div>
 <nav id="nav">
 <a href="#projects">Projects</a>
 <a href="#experience">Experience</a>
@@ -723,12 +904,14 @@ section{margin-bottom:44px}
 <a href="#github">GitHub</a>
 </nav>
 <div class="toggle-group">
-<button class="mobile-btn" id="mobileBtn" onclick="toggleMobile()" aria-label="Menu">
+<button class="mobile-btn" id="mobileBtn" onclick="toggleMobile()" aria-label="Menu" aria-expanded="false" aria-controls="nav">
 <span></span><span></span><span></span>
 </button>
 <button class="theme-btn" onclick="toggleDark()" aria-label="Toggle theme" id="themeBtn">🌙</button>
 </div>
 </header>
+
+<main id="main">
 
 <!-- HERO -->
 <div class="hero fade">
@@ -738,10 +921,18 @@ section{margin-bottom:44px}
 <p class="hero-role">RN &middot; EMT &middot; Web Developer</p>
 <div class="hero-divider"></div>
 <p class="hero-desc">Medical professional with more than 10 years of frontline pre-hospital experience combined with strong technical skills in web development, digital clinical tools, and mobile apps published on Google Play.</p>
-<a class="btn" href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank">
+<div class="hero-actions">
+<a class="btn" href="CV/Soliman_Anas_Medical_Systems_Support_CV.pdf" target="_blank" rel="noopener">
 Download CV
 <svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M15 18l6-6-6-6"/></svg>
 </a>
+<a class="btn btn-ghost" href="#contact">Get in touch</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat"><strong>10+</strong><span>Years in EMS &amp; critical care</span></div>
+<div class="hero-stat"><strong>3</strong><span>Live apps</span></div>
+<div class="hero-stat"><strong>2</strong><span>On Google Play</span></div>
+</div>
 </div>
 </div>
 
@@ -772,21 +963,30 @@ Designed responsive web applications optimized for mobile use during ambulance o
 <div class="card">
 <span class="card-icon">🏥</span>
 <h3>DCAS Smart CPG</h3>
+<div class="card-tags"><span class="tag">PWA</span><span class="tag">EMS</span></div>
 <p>Clinical Practice Guidelines Progressive Web App designed for EMS operational environments providing rapid protocol access.</p>
-<a class="card-link" href="https://solimananas.github.io/CPG-2025/" target="_blank">Open Project &rarr;</a>
+<div class="card-actions">
+<a class="card-link" href="https://solimananas.github.io/CPG-2025/" target="_blank" rel="noopener">Open Project &rarr;</a>
+</div>
 </div>
 <div class="card">
 <span class="card-icon">🕌</span>
 <h3>Zad Al-Muslim</h3>
-<p>Islamic digital assistant including Tasbeeh counter and useful Muslim productivity tools. Available on Google Play.</p>
-<a class="card-link" href="https://play.google.com/store/apps/details?id=io.github.solimananas.twa" target="_blank">Get it on Google Play &rarr;</a>
-<a class="card-link" href="https://solimananas.github.io/Tasbee7/" target="_blank">Open Web App &rarr;</a>
+<div class="card-tags"><span class="tag">Android</span><span class="tag">PWA</span></div>
+<p>Islamic digital assistant including Tasbeeh counter and useful Muslim productivity tools.</p>
+<div class="card-actions">
+<a class="play-btn" href="https://play.google.com/store/apps/details?id=io.github.solimananas.twa" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l17-9.5z"/></svg> Google Play</a>
+<a class="card-link" href="https://solimananas.github.io/Tasbee7/" target="_blank" rel="noopener">Web App &rarr;</a>
+</div>
 </div>
 <div class="card">
 <span class="card-icon">📚</span>
 <h3>SmartCare</h3>
-<p>Offline-first clinical learning platform for healthcare professionals: study modules, flashcards, quizzes, ECG simulator and drug calculator. Available on Google Play.</p>
-<a class="card-link" href="https://play.google.com/store/apps/details?id=io.github.solimananas.smartcare" target="_blank">Get it on Google Play &rarr;</a>
+<div class="card-tags"><span class="tag">Android</span><span class="tag">Offline-first</span></div>
+<p>Clinical learning platform for healthcare professionals: study modules, flashcards, quizzes, ECG simulator and drug calculator.</p>
+<div class="card-actions">
+<a class="play-btn" href="https://play.google.com/store/apps/details?id=io.github.solimananas.smartcare" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2.5v19l17-9.5z"/></svg> Google Play</a>
+</div>
 </div>
 </div>
 </section>
@@ -891,11 +1091,12 @@ Designed responsive web applications optimized for mobile use during ambulance o
 </div>
 <div class="contact-item">
 <span class="contact-icon">📞</span>
-<p>+971 55 178 8017</p>
+<p><a href="tel:+971551788017">+971 55 178 8017</a></p>
 </div>
-<div class="contact-item">
+<div class="contact-item contact-wide">
 <span class="contact-icon">✉️</span>
-<p>Ssoliman@dcas.gov.ae</p>
+<p><a href="mailto:Solimananas2012@gmail.com">Solimananas2012@gmail.com</a></p>
+<button class="copy-btn" type="button" data-copy="Solimananas2012@gmail.com">Copy</button>
 </div>
 <div class="contact-item">
 <span class="contact-icon">🔗</span>
@@ -903,23 +1104,32 @@ Designed responsive web applications optimized for mobile use during ambulance o
 </div>
 <div class="contact-item">
 <span class="contact-icon">💻</span>
-<p><a href="https://github.com/SolimanAnas" target="_blank">github.com/SolimanAnas &rarr;</a></p>
+<p><a href="https://github.com/SolimanAnas" target="_blank" rel="noopener">github.com/SolimanAnas &rarr;</a></p>
+</div>
+<div class="contact-item">
+<span class="contact-icon">💬</span>
+<p><a href="https://wa.me/971551788017" target="_blank" rel="noopener">WhatsApp &rarr;</a></p>
 </div>
 </div>
 </section>
 
+</main>
+
 <footer>
-<p>&copy; 2026 Soliman Anas Soliman</p>
+<p>&copy; 2026 Soliman Anas Soliman &middot; <a href="terminal.html">Terminal version &rarr;</a></p>
 </footer>
 
 </div>
 
 </div>
 
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
 <script>
 
 function toggleDark(){
-const isDark = document.body.classList.toggle("dark");
+const isDark = document.documentElement.classList.toggle("dark");
+try{ localStorage.setItem("theme", isDark ? "dark" : "light"); }catch(e){}
 document.getElementById("themeBtn").textContent = isDark ? "☀️" : "🌙";
 const topLangs = document.getElementById("topLangsImg");
 if(topLangs){
@@ -930,14 +1140,52 @@ topLangs.src = isDark
 }
 
 function toggleMobile(){
-document.getElementById("nav").classList.toggle("open");
-document.getElementById("mobileBtn").classList.toggle("active");
+const open = document.getElementById("nav").classList.toggle("open");
+const btn = document.getElementById("mobileBtn");
+btn.classList.toggle("active", open);
+btn.setAttribute("aria-expanded", open);
 }
 
 document.querySelectorAll("nav a").forEach(a => {
 a.addEventListener("click", () => {
 document.getElementById("nav").classList.remove("open");
 document.getElementById("mobileBtn").classList.remove("active");
+document.getElementById("mobileBtn").setAttribute("aria-expanded", "false");
+});
+});
+
+// Active nav link for the section in view
+const navLinks = [...document.querySelectorAll("nav a")];
+const navObserver = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(!entry.isIntersecting) return;
+navLinks.forEach(a => a.classList.toggle("active", a.getAttribute("href") === "#" + entry.target.id));
+});
+},{rootMargin:"-45% 0px -50% 0px"});
+document.querySelectorAll("section[id]").forEach(sec => navObserver.observe(sec));
+
+// Header shadow + back-to-top
+const headerEl = document.querySelector("header");
+const toTop = document.getElementById("toTop");
+function onScroll(){
+const y = window.scrollY;
+headerEl.classList.toggle("scrolled", y > 8);
+toTop.classList.toggle("show", y > 600);
+}
+window.addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+toTop.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+
+// Copy email
+document.querySelectorAll(".copy-btn").forEach(btn => {
+btn.addEventListener("click", async () => {
+try{
+await navigator.clipboard.writeText(btn.dataset.copy);
+btn.textContent = "Copied ✓";
+}catch(e){
+btn.textContent = "Press Ctrl+C";
+}
+setTimeout(() => btn.textContent = "Copy", 1800);
 });
 });
 
@@ -949,10 +1197,10 @@ if(entry.isIntersecting) entry.target.classList.add("show");
 
 document.querySelectorAll(".fade").forEach(el => observer.observe(el));
 
-if(document.body.classList.contains("dark")) document.getElementById("themeBtn").textContent = "☀️";
+if(document.documentElement.classList.contains("dark")) document.getElementById("themeBtn").textContent = "☀️";
 // Set correct top-langs theme on load
 const topLangs = document.getElementById("topLangsImg");
-if(topLangs && !document.body.classList.contains("dark")){
+if(topLangs && !document.documentElement.classList.contains("dark")){
 topLangs.src = "https://github-readme-stats.shion.dev/api/top-langs/?username=SolimanAnas&layout=compact&theme=buefy&hide_border=true&bg_color=ffffff&title_color=1e3a8a&text_color=334155";
 }
 
