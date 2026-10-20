@@ -55,14 +55,14 @@
   <path d="M760,22 L768,22 L771,18 L774,26 L777,22 L785,22" fill="none" stroke="#22c55e" stroke-width="1.2" opacity="0.4"/>
 </svg>
 
-**RN | Paramedic | Medical Systems Support | Web Developer**
+**RN | Paramedic | Graph Designer | Web Developer**
 
 Medical professional with 10+ years in emergency and prehospital care. I build practical tools for real-world clinical environments — lightweight, offline-first, and designed for the field.
 
 **What I do:**
 
 - Clinical workflow optimization & guideline digitization
-- EMS-friendly digital tools and PWA applications
+- Medical-friendly digital tools and PWA applications
 - Translating complex protocols into usable systems
 
 <svg width="100%" height="16" viewBox="0 0 800 16" xmlns="http://www.w3.org/2000/svg">
